@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AL SAMA AUTO | ورشة طيور السماء</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cairo:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0B1F3A;--paper:#F5F7FA;--white:#fff;--yellow:#12A594;--steel:#0B5FA5;--mute:#5F6B7A;--line:#DDE3EA;--ok:#1E8E5A;--sh:0 8px 28px rgba(11,31,58,.08)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px}
+.ar{font-family:Cairo,sans-serif;direction:rtl}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+section{padding:80px 0}
+.stripe{display:none}
+.top{background:var(--ink);color:#c5d0de;font-size:13px;padding:8px 0}
+.top .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.top a{text-decoration:none}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-weight:800;font-size:20px;text-decoration:none;display:flex;align-items:center;gap:8px;letter-spacing:.02em}
+.logo i{background:var(--ink);color:#fff;padding:2px 10px;border-radius:8px;font-style:normal}
+.logo small{font:600 13px Cairo;color:var(--mute);margin-left:4px}
+nav{display:flex;gap:26px;font-weight:600;font-size:14px;color:#33465E}
+nav a{text-decoration:none}
+nav a:hover{color:var(--yellow)}
+.btn{display:inline-block;background:var(--ink);color:#fff;border:0;border-radius:10px;padding:12px 24px;font:700 15px 'Plus Jakarta Sans';text-decoration:none;cursor:pointer;transition:.15s}
+.btn:hover{background:#12325C;transform:translateY(-1px)}
+.btn.alt{background:var(--white);color:var(--ink);border:1.5px solid var(--line)}
+.btn.alt:hover{border-color:var(--ink);background:var(--white)}
+.btn.wa{background:#1FA855;color:#fff}
+#burger{display:none;background:none;border:1.5px solid var(--line);border-radius:8px;font-size:22px;padding:2px 10px;cursor:pointer}
+#mnav{display:none;background:var(--white);border-bottom:1px solid var(--line);padding:12px 20px}
+#mnav a{display:block;padding:9px 0;font-weight:600;text-decoration:none}
+@media(max-width:900px){nav,.hdr-cta{display:none}#burger{display:block}#mnav.open{display:block}}
+.hero{padding:64px 0 80px;background:linear-gradient(180deg,#fff,var(--paper))}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.tag{display:inline-block;background:#E4F5F2;color:#0B7A6D;font-weight:600;font-size:13px;padding:6px 14px;border-radius:99px;margin-bottom:20px}
+h1{font-size:clamp(34px,4.6vw,56px);line-height:1.1;font-weight:800;letter-spacing:-.02em}
+h1 span{color:var(--yellow);display:block}
+.hero .ar{font-size:20px;font-weight:700;margin:18px 0 10px;color:var(--steel)}
+.hero p.lead{max-width:54ch;color:var(--mute)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}
+.chips b{background:var(--white);border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:13px;font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-radius:14px;background:var(--white);box-shadow:var(--sh)}
+.facts div{padding:16px;border-right:1px solid var(--line)}
+.facts div:last-child{border:0}
+.facts .num{font-size:24px;font-weight:800;line-height:1.1}
+.facts small{color:var(--mute);font-size:12px}
+@media(max-width:600px){.facts{grid-template-columns:1fr 1fr}}
+.photo{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--sh);background:linear-gradient(135deg,#DCE6F1,#EEF3F8);min-height:420px}
+.photo img{display:block;width:100%;height:480px;object-fit:cover}
+.photo .cap{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(11,31,58,.92);color:#fff;border-radius:12px;padding:12px 16px;display:flex;justify-content:space-between;gap:10px;font-size:13px}
+.photo .cap a{color:#5EE0CF;font-weight:600;white-space:nowrap}
+.head{max-width:720px;margin-bottom:40px}
+.head h2{font-size:clamp(28px,3.4vw,40px);font-weight:800;line-height:1.15;letter-spacing:-.01em}
+.head .ar{color:var(--steel);font-weight:700;margin-top:8px}
+.head p{color:var(--mute);margin-top:6px}
+.dark{background:var(--ink);color:#fff}
+.dark .head p{color:#9fb0c6}.dark .head .ar{color:#5EE0CF}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.tabs button{font:600 14px 'Plus Jakarta Sans';padding:8px 18px;border:1px solid var(--line);border-radius:99px;background:var(--white);cursor:pointer;color:var(--ink)}
+.tabs button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px}
+.svc{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;box-shadow:var(--sh)}
+.svc h3{font-size:18px;font-weight:700;line-height:1.25}
+.svc .p{font-weight:700;font-size:13px;color:#0B7A6D;background:#E4F5F2;border-radius:99px;padding:3px 10px;white-space:nowrap}
+.svc .r{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.svc .ar{color:var(--mute);font-size:14px;margin:8px 0}
+.svc p{font-size:14px;color:#44546A}
+.svc button{width:100%}
+.est{display:grid;grid-template-columns:1.4fr 1fr;gap:32px}
+@media(max-width:900px){.est{grid-template-columns:1fr}}
+.lbl{font-weight:700;font-size:15px;margin-bottom:12px}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:28px}
+.cat{background:var(--white);border:1.5px solid var(--line);border-radius:12px;padding:12px;text-align:left;cursor:pointer;font:inherit;color:var(--ink)}
+.cat b{display:block;font-size:14px}.cat small{color:var(--mute);font-size:12px}
+.cat.on{border-color:var(--yellow);background:#E4F5F2}
+.opt{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px;border:1.5px solid var(--line);border-radius:12px;margin-bottom:10px;cursor:pointer;background:var(--white)}
+.opt:has(input:checked){border-color:var(--yellow);background:#F3FBF9}
+.opt input{accent-color:var(--yellow);width:18px;height:18px;margin-right:12px;vertical-align:middle}
+.opt span small{display:block;color:var(--mute);font-size:13px;margin-left:30px}
+.opt em{font-weight:700;font-style:normal;color:var(--ink);white-space:nowrap;font-size:14px}
+.ticket{background:var(--ink);color:#fff;border-radius:20px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;box-shadow:var(--sh)}
+.ticket h3{font-size:18px;font-weight:700;border-bottom:1px dashed #3B5478;padding-bottom:12px;margin-bottom:14px}
+.row{display:flex;justify-content:space-between;gap:10px;font-size:14px;padding:4px 0}
+.ticket .row span{color:#9fb0c6}
+.total{font-size:64px;font-weight:800;line-height:1;color:#5EE0CF}
+.total small{font-size:22px;color:#fff}
+.ticket .btn.alt{border:0}
+.ba{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:26px}
+.card{background:var(--white);color:var(--ink);border-radius:18px;overflow:hidden}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:var(--ink)}
+.pair figure{position:relative}
+.pair img,.card video{display:block;width:100%;height:290px;object-fit:cover;background:#DCE6F1}
+.pair figcaption,.vt{position:absolute;top:10px;left:10px;font:600 12px 'Plus Jakarta Sans';padding:4px 12px;border-radius:99px;color:#fff;background:#C62828}
+.pair figure+figure figcaption{background:var(--ok)}
+.vt{background:#fff;color:var(--ink)}
+.card .body{padding:22px}
+.card h3{font-size:18px;font-weight:700;line-height:1.3}
+.card p{font-size:14px;color:#44546A;margin:8px 0 16px}
+.card .ft{display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:14px;font-size:13px;font-weight:600;color:var(--ok)}
+.card .ft a{color:var(--steel)}
+.quick{margin-top:32px;background:rgba(255,255,255,.06);border-radius:16px;padding:24px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+.quick h4{font-size:20px;font-weight:700}
+.quick p{color:#9fb0c6;font-size:14px}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.why div{padding:26px;background:var(--white);border-radius:16px;border:1px solid var(--line);box-shadow:var(--sh)}
+.why h3{font-size:18px;font-weight:700;line-height:1.25}
+.why .ar{color:var(--steel);font-size:14px;margin:6px 0 10px}
+.why p{font-size:14px;color:#44546A}
+#booking{background:#E9F4F2!important;border:0!important}
+#booking .ar{color:var(--steel)!important}
+form{background:var(--white);border-radius:20px;padding:32px;position:relative;box-shadow:var(--sh)}
+.f{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-bottom:18px}
+label{display:block;font-weight:600;font-size:13px;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:15px;padding:11px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus,.btn:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid rgba(18,165,148,.45);outline-offset:2px}
+#done{display:none;position:absolute;inset:0;background:var(--white);border-radius:20px;padding:28px;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:12px;z-index:5}
+#done.show{display:flex}
+#done h3{font-size:26px!important;text-transform:none!important}
+#done .box{background:var(--paper);border-radius:12px;padding:16px;width:100%;max-width:480px;text-align:left;font-size:14px}
+#done .row b:last-child{text-align:right}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:28px}
+.info div{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:22px;font-size:14px}
+.info h4{font-size:16px;font-weight:700;margin-bottom:8px}
+.info .ar{color:var(--steel);font-weight:700}
+.info .off{color:#C62828;font-weight:700}
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:800px){.loc{grid-template-columns:1fr}}
+.loc>div{border-radius:18px;background:var(--white);overflow:hidden;box-shadow:var(--sh)}
+.loc img,.loc iframe{display:block;width:100%;height:380px;border:0;object-fit:cover;background:#DCE6F1}
+.loc .ft{padding:16px;display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;font-size:14px}
+footer{background:var(--ink);color:#9fb0c6;padding:32px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+footer a{color:#5EE0CF;font-weight:600}
+.fab{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:30}
+.fab a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font:700 13px 'Plus Jakarta Sans';text-decoration:none;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span><a href="https://maps.google.com/maps?q=25.3108911%2C55.4036854&z=17&hl=en" target="_blank">Industrial Area, Sharjah, UAE</a> &nbsp;|&nbsp; Sat&ndash;Thu 9:00 AM &ndash; 9:00 PM, Fri closed</span>
+  <span><span class="ar">السماء للسيارات</span> &nbsp;|&nbsp; <a href="tel:+971564580084"><b>Call +971 56 458 0084</b></a></span>
+</div></div>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="logo"><i>AL SAMA</i>AUTO<small class="ar">السماء للسيارات</small></a>
+    <nav>
+      <a href="#services">Services</a><a href="#estimator">Cost Estimator</a><a href="#restorations">Restorations</a><a href="#why-us">Why Us</a><a href="#booking">Booking</a><a href="#contact">Location</a>
+    </nav>
+    <div class="hdr-cta" style="display:flex;gap:12px">
+      <a class="btn wa" style="padding:9px 18px" target="_blank" href="https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto,%20I%20would%20like%20to%20inquire%20about%20car%20service">WhatsApp</a>
+      <a class="btn" style="padding:9px 18px" href="#booking">Book Service</a>
+    </div>
+    <button id="burger" aria-label="Menu" onclick="document.getElementById('mnav').classList.toggle('open')">&#9776;</button>
+  </div>
+  <div id="mnav" onclick="this.classList.remove('open')">
+    <a href="#services">Automotive Services</a><a href="#estimator">Price Calculator (AED)</a><a href="#restorations">Before &amp; After</a><a href="#why-us">Why Choose Us</a><a href="#booking">Book Appointment</a><a href="#contact">Location</a>
+    <a href="tel:+971564580084"><b>Call +971 56 458 0084</b></a>
+  </div>
+</header>
+<div class="stripe"></div>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="tag">Sharjah certified workshop &bull; German, Japanese &amp; American auto care</span>
+    <h1>Al Sama Auto <span>Maintenance in Sharjah</span></h1>
+    <div class="ar">السماء للسيارات &ndash; دقة، أمانة، وأداء مثالي لكل رحلة</div>
+    <p class="lead">Specialized in high-temperature UAE climate conditioning, computerized OBD-II engine and transmission diagnostics, chassis straightening, accident rebuilding, and certified major servicing.</p>
+    <div class="chips"><b>Genuine OEM parts with warranty</b><b>Gulf AC experts, sub-zero cooling</b><b>Dealer-level live diagnostics</b><b>Same-day express</b></div>
+    <div class="cta"><a class="btn" href="#booking">Book Bay Inspection</a><a class="btn alt" href="#estimator">Estimate Repair Cost (AED)</a></div>
+    <div class="facts">
+      <div><div class="num">15,000+</div><small>Vehicles serviced</small></div>
+      <div><div class="num">100%</div><small>Transparent invoicing</small></div>
+      <div><div class="num">4.9/5.0</div><small>Customer satisfaction</small></div>
+      <div><div class="num">12 Mo</div><small>Labor guarantee</small></div>
+    </div>
+  </div>
+  <div class="photo">
+    <img src="./workshop-bay.jpeg" alt="Al Sama Auto Workshop Bay Facility" onerror="this.src='./accident-1-after.jpeg'">
+    <div class="cap"><span><b>Workshop bays: active.</b> Multiple service lifts &amp; diagnostics bays</span><a href="#booking">Reserve lift</a></div>
+  </div>
+</div></section>
+
+<section id="services" style="background:var(--white)"><div class="wrap">
+  <div class="head"><h2>Our Workshop Specialties</h2><div class="ar">خدمات شاملة لصيانة وتصليح جميع أنواع المركبات بأعلى معايير الجودة والضمان</div><p>Engineered for UAE conditions.</p></div>
+  <div class="tabs" id="tabs">
+    <button class="on" data-c="all">All Services</button><button data-c="ac-engine">AC &amp; Engine</button><button data-c="brakes-suspension">Brakes &amp; Suspension</button><button data-c="maintenance">Periodic Service</button>
+  </div>
+  <div class="grid" id="svcGrid"></div>
+</div></section>
+
+<section id="estimator"><div class="wrap">
+  <div class="head"><h2>Interactive AED Cost Estimator</h2><div class="ar">حاسبة تكاليف صيانة السيارات الفورية بالدرهم الإماراتي بدون رسوم مخفية</div></div>
+  <div class="est">
+    <div>
+      <div class="lbl">1. Select vehicle category / نوع السيارة</div>
+      <div class="cats" id="cats"></div>
+      <div class="lbl">2. Choose service items / اختر الخدمات المطلوبة</div>
+      <div id="opts"></div>
+    </div>
+    <div class="ticket">
+      <div>
+        <h3>Quotation Summary (AED)</h3>
+        <div class="row"><span>Category</span><b id="dCat">Economy / Compact Sedan</b></div>
+        <div class="row"><span>Multiplier</span><b id="dMul">1.0x</b></div>
+        <div class="row"><span>Bay labor &amp; tools</span><b>Included</b></div>
+        <div class="row"><span>Estimated completion</span><b id="dDur">1.5 &ndash; 2.0 Hours</b></div>
+      </div>
+      <div>
+        <div>Estimated price</div>
+        <div class="total"><span id="total">220</span> <small>AED</small></div>
+        <button class="btn alt" style="width:100%;margin-top:14px" onclick="estToBooking()">Book Bay With This Estimate</button>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="restorations" class="dark"><div class="wrap">
+  <div class="head"><h2>Accident Restorations &amp; Oven Baking</h2><div class="ar">إصلاح حوادث السيارات وتعديل الشاصي والصبغ الحراري داخل الفرن</div><p>From heavy structural rebuilding to dust-free thermal oven baking with a showroom mirror finish.</p></div>
+  <div class="ba">
+    <div class="card">
+      <div class="pair">
+        <figure><figcaption>Before: crash damage</figcaption><img src="./accident-1-before.jpeg" alt="Mercedes damage before"></figure>
+        <figure><figcaption>After: restored &amp; painted</figcaption><img src="./accident-1-after.jpeg" alt="Mercedes restored after"></figure>
+      </div>
+      <div class="body">
+        <h3>Mercedes-Benz C-Class: Structural Chassis Rebuild</h3>
+        <p>Complete rocker panel alignment, new suspension control arms, bumper and fender calibration, followed by computerized metallic paint matching.</p>
+        <div class="ft"><span>Passed UAE inspection guaranteed</span><a target="_blank" href="https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto,%20I%20saw%20your%20Mercedes%20restoration%20and%20want%20a%20bodywork%20quote">Inquire</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div style="position:relative;background:#000">
+        <video autoplay muted loop playsinline controls poster="./accident-1-after.jpeg"><source src="./paint-booth-finish.mp4" type="video/mp4"></video>
+        <span class="vt">Oven paint booth live</span>
+      </div>
+      <div class="body">
+        <h3>Complete Vehicle Respray &amp; High-Gloss Clear Coat</h3>
+        <p>Full car masking, multi-layer scratch filling, computerized paint mixing, followed by high-temperature dust-free oven baking for a zero orange-peel finish.</p>
+        <div class="ft"><span>3-year warranty against peeling &amp; fading</span><a target="_blank" href="https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto,%20I%20want%20a%20quote%20for%20a%20full%20car%20paint%20booth%20respray">Inquire</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="quick">
+    <div><h4>Need denting, chassis pulling, or oven painting?</h4><p>Send clear photos or a video of the damaged vehicle on WhatsApp for a fast preliminary repair estimate.</p></div>
+    <a class="btn wa" target="_blank" href="https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto,%20I%20have%20an%20accident%20car%20and%20want%20to%20share%20photos%20for%20a%20repair%20quote">WhatsApp Accident Media</a>
+  </div>
+</div></section>
+
+<section id="why-us"><div class="wrap">
+  <div class="head"><h2>Why Drivers Trust Our Workshop</h2><div class="ar">لماذا يختار السائقون ورشة طيور السماء لصيانة سياراتهم في الشارقة؟</div></div>
+  <div class="why">
+    <div><h3>Master Technicians</h3><div class="ar">مهندسون وفنيون ذوو خبرة</div><p>Decades of combined hands-on experience dealing with Middle East climate conditions and high desert ambient heat.</p></div>
+    <div><h3>Honest Transparent Pricing</h3><div class="ar">أسعار واضحة بدون مصاريف مخفية</div><p>No work is started without an upfront itemized written quote. Photos and videos are shared with you via WhatsApp.</p></div>
+    <div><h3>Dealer-Grade Technology</h3><div class="ar">أجهزة فحص إلكترونية حديثة</div><p>Factory-level scan tools capable of reprogramming electronic control modules, sensor calibrations, and gearbox adaptations.</p></div>
+    <div><h3>Comprehensive Warranty</h3><div class="ar">ضمان حقيقي على قطع الغيار والأيدي العاملة</div><p>We stand behind every repair. All fitted components and mechanical work are backed by a certified garage warranty.</p></div>
+  </div>
+</div></section>
+
+<section id="booking" style="background:var(--yellow);border-block:2px solid var(--ink)"><div class="wrap" style="max-width:860px">
+  <div class="head"><h2>Schedule Your Car Maintenance</h2><div class="ar" style="color:var(--ink)">احجز موعد الصيانة الخاص بك وسيتم تجهيز فتحة الفحص فور وصولك</div></div>
+  <form id="bf" onsubmit="book(event)">
+    <div class="f">
+      <div><label for="cn">Customer name / الاسم الكامل *</label><input id="cn" required placeholder="e.g. Faisal Hanif"></div>
+      <div><label for="cp">UAE mobile / WhatsApp (+971) *</label><input id="cp" type="tel" required placeholder="+971 56 458 0084"></div>
+    </div>
+    <div class="f">
+      <div><label for="mk">Car make / الشركة المصنعة *</label><input id="mk" required placeholder="e.g. Mercedes, Nissan, Toyota"></div>
+      <div><label for="md">Model &amp; year / الموديل والسنة *</label><input id="md" required placeholder="e.g. C-Class / 2023"></div>
+      <div><label for="pl">Emirate / plate code</label><input id="pl" placeholder="e.g. Sharjah 5 - 3137"></div>
+    </div>
+    <div class="f">
+      <div><label for="sv">Required service / نوع الخدمة *</label>
+        <select id="sv" required>
+          <option value="Accident Body Repair & Oven Paint">Accident Body Repair &amp; Oven Paint</option>
+          <option value="Periodic Minor/Major Service">Periodic Minor/Major Service (دورية)</option>
+          <option value="UAE Climate AC Overhaul">UAE AC Overhaul &amp; Cooling (مكيف)</option>
+          <option value="Brake System & Disc Service">Brakes &amp; Discs (فرامل وسفايف)</option>
+          <option value="Computer Diagnostics & Scans">Computer Diagnostics (فحص كمبيوتر)</option>
+          <option value="Suspension & Alignment">Suspension &amp; 4x4 (شاصي ومساعدات)</option>
+        </select></div>
+      <div><label for="dt">Preferred date / تاريخ الحجز *</label><input id="dt" type="date" required></div>
+      <div><label for="tm">Time slot / الوقت المناسب *</label>
+        <select id="tm" required>
+          <option value="09:30 AM - Morning Slot">09:30 AM (Morning drop-off)</option>
+          <option value="11:30 AM - Midday Slot">11:30 AM (Midday bay)</option>
+          <option value="03:00 PM - Afternoon Slot">03:00 PM (Afternoon express)</option>
+          <option value="06:00 PM - Evening Slot">06:00 PM (Evening quick slot)</option>
+        </select></div>
+    </div>
+    <div style="margin-bottom:18px"><label for="nt">Vehicle issues / damage notes (ملاحظات الأعطال)</label><textarea id="nt" rows="3" placeholder="Describe any accident damage, warning lights, or mechanical symptoms..."></textarea></div>
+    <button class="btn" style="width:100%" type="submit">Confirm Reservation &amp; Open WhatsApp Dispatch</button>
+    <div id="done">
+      <b style="color:var(--ok)">Workshop booking verified</b>
+      <h3>Al Sama Auto Job Card Reserved</h3>
+      <div class="ar" style="font-weight:700">تم تأكيد حجزك في ورشة السماء للسيارات بنجاح</div>
+      <div class="box">
+        <div class="row"><span>Job reference</span><b id="rRef"></b></div>
+        <div class="row"><span>Client</span><b id="rName"></b></div>
+        <div class="row"><span>Vehicle</span><b id="rCar"></b></div>
+        <div class="row"><span>Date &amp; slot</span><b id="rDt"></b></div>
+        <div class="row"><span>Service</span><b id="rSv"></b></div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+        <a id="rWa" class="btn wa" target="_blank" href="#">Send To Workshop WhatsApp</a>
+        <button type="button" class="btn alt" onclick="closeDone()">Done / Close</button>
+      </div>
+    </div>
+  </form>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="head"><h2>Workshop Bay &amp; Location</h2><div class="ar">موقع ورشة طيور السماء لصيانة السيارات وأوقات العمل في الشارقة</div></div>
+  <div class="info">
+    <div><h4>Workshop Location</h4><b>AL SAMA AUTO</b><div class="ar">ورشة طيور السماء لصيانة السيارات</div>Industrial Area, Sharjah, UAE</div>
+    <div><h4>Working Hours</h4><div class="row"><span>Saturday &ndash; Thursday</span><b>9:00 AM &ndash; 9:00 PM</b></div><div class="row"><span>Friday</span><span class="off">Closed</span></div></div>
+    <div><h4>Direct Contact</h4>Mobile / WhatsApp: <a href="tel:+971564580084"><b>+971 56 458 0084</b></a><br><span style="color:var(--mute)">Instant WhatsApp support, drop-off bookings, and preliminary cost quotations.</span></div>
+  </div>
+  <div class="loc">
+    <div>
+      <img src="./workshop-signboard.jpeg" alt="Teyour Al Sama Auto Signboard" onerror="this.src='./accident-1-after.jpeg'">
+      <div class="ft"><div><b>Workshop entrance signboard</b><br><span style="color:var(--mute)">Look for this board when arriving at our Sharjah facility</span></div><b style="color:var(--ok)">Open Sat&ndash;Thu</b></div>
+    </div>
+    <div>
+      <iframe src="https://maps.google.com/maps?q=25.3108911,55.4036854&z=16&output=embed" title="Map" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="ft"><div><b>Coordinates: 25.3108911, 55.4036854</b><br><span style="color:var(--mute)">Industrial Area, Sharjah, UAE</span></div><a class="btn" style="padding:9px 18px" target="_blank" href="https://maps.google.com/maps?q=25.3108911%2C55.4036854&z=17&hl=en">Start Navigation</a></div>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b style="color:#fff">AL SAMA AUTO</b> &bull; <span class="ar" style="color:var(--yellow)">ورشة طيور السماء</span><br>&copy; 2026 All Rights Reserved. Designed &amp; Developed by <a href="https://github.com/MuhammadFaisalHanif" target="_blank">Faisal</a></div>
+  <a href="#booking">Book an Appointment</a>
+</div></footer>
+
+<div class="fab">
+  <a style="background:#25D366" target="_blank" title="WhatsApp Workshop" href="https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto,%20I%20would%20like%20to%20inquire%20about%20car%20service">WA</a>
+  <a style="background:var(--ink)" href="tel:+971564580084" title="Call Workshop">Call</a>
+</div>
+
+<script>
+const SERVICES=[
+["ac-engine","UAE Climate AC Overhaul",180,"صيانة وتعبئة مكيفات السيارات والتبريد الفائق","Heavy-duty recovery and recharge of R134a refrigerants, evaporator leak checks, compressor clutch testing, condenser chemical wash, and cabin disinfection designed to beat 50°C summer heat.","AC Overhaul & Climate Control","UAE Climate AC Overhaul","Book AC Service"],
+["ac-engine","Computerized Diagnostics",150,"فحص وبرمجة كمبيوتر السيارات وكشف الأعطال","OEM scanners for Mercedes, BMW, Audi, Lexus, Patrol, Land Cruiser. Comprehensive engine check light analysis, live sensor readings, and module adaptation resets.","Computer Diagnostics & Scans","Computer Diagnostics & Scans","Book Diagnostic Bay"],
+["brakes-suspension","Brake Discs & Resurfacing",200,"تبديل وتخريطه سفايف وفرامل وضبط الأمان","Ceramic high-heat brake pads replacement, on-car rotor skim resurfacing to eliminate vibration at highway speeds, and DOT 4 pressure bleeding.","Brake System & Disc Service","Brake System & Disc Service","Book Brake Service"],
+["brakes-suspension","Suspension & 4x4 Off-Road",250,"صيانة الشاصي والمساعدات والمساعدات الهيدروليكية","Shock absorbers, air suspension struts, tie rods, control arm bushings, steering racks, and 3D computer wheel alignment configured for UAE cruising and dunes.","Suspension & Alignment","Suspension & Alignment","Book Suspension Work"],
+["maintenance","Minor & Major Periodic Service",220,"صيانة دورية دورية كبرى وصغرى بزيوت أصلية معتمدة","Fully synthetic engine oil (Liqui Moly / Castrol), OEM oil and air filters, iridium spark plugs, coolant top-up, and comprehensive 50-point inspection.","Periodic Minor/Major Service","Periodic Minor/Major Service","Book Periodic Service"],
+["ac-engine","Transmission & Gearbox Care",350,"صيانة الجير الأوتوماتيكي وتغيير زيت الفتيس والفلتر","Transmission fluid flush, mechatronic troubleshooting, torque converter checks, valve body inspection, and replacement of internal filters and pans.","Transmission & Gearbox Repair","","Book Gearbox Inspection"]
+];
+const CATS=[["economy",1.0,"Economy / Compact Sedan","Sedan","Corolla, Civic, Sunny"],["suv",1.3,"Midsize SUV / Crossover","Midsize SUV","RAV4, Prado, Tucson"],["luxury",1.7,"Luxury / European Performance","Luxury / Euro","BMW, Merc, Porsche"],["offroad",1.5,"4x4 Off-road / Patrol & Land Cruiser","Heavy 4x4","Patrol, LC300, Tahoe"]];
+const OPTS=[[220,"Synthetic Oil Change & Genuine Filter","Liqui Moly / Castrol + 50-point complimentary inspection",1],[200,"Brake Pad Replacement & Rotor Skimming","Front axle ceramic pads + vibration elimination lathe work",0],[180,"AC Gas Top-Up, Refrigerant Recovery & Leak Check","High-efficiency climate prep + cabin odor sterilization",0],[150,"Deep OBD-II Diagnostic Scan & Health Report","Engine, gearbox, ABS, airbag sensor fault identification",0]];
+let mult=1.0,catTitle=CATS[0][2];
+const $=id=>document.getElementById(id);
+
+$('svcGrid').innerHTML=SERVICES.map((s,i)=>`<div class="svc" data-c="${s[0]}"><div><div class="r"><h3>${s[1]}</h3><span class="p">From ${s[2]} AED</span></div><div class="ar">${s[3]}</div><p>${s[4]}</p></div><button class="btn alt" onclick="prefill(${i})">${s[7]}</button></div>`).join('');
+$('tabs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('.svc').forEach(c=>c.style.display=(b.dataset.c==='all'||c.dataset.c===b.dataset.c)?'flex':'none');});
+
+$('cats').innerHTML=CATS.map((c,i)=>`<button type="button" class="cat${i?'':' on'}" onclick="pickCat(${i},this)"><b>${c[3]}</b><small>${c[4]}</small></button>`).join('');
+$('opts').innerHTML=OPTS.map(o=>`<label class="opt"><span><input type="checkbox" class="ck" value="${o[0]}" ${o[3]?'checked':''} onchange="calc()"><b>${o[1]}</b><small>${o[2]}</small></span><em>${o[0]} AED</em></label>`).join('');
+
+function pickCat(i,el){mult=CATS[i][1];catTitle=CATS[i][2];
+  document.querySelectorAll('.cat').forEach(b=>b.classList.toggle('on',b===el));
+  $('dCat').textContent=catTitle;$('dMul').textContent=mult.toFixed(1)+'x';calc();}
+function calc(){let base=0,h=0;document.querySelectorAll('.ck:checked').forEach(c=>{base+=+c.value;h+=0.6});
+  if(!base){$('total').textContent='0';$('dDur').textContent='No item selected';return}
+  $('total').textContent=Math.round(base*mult);$('dDur').textContent=`${h.toFixed(1)} - ${(h+0.8).toFixed(1)} Hours`;}
+function prefill(i){const s=SERVICES[i];if(s[6])$('sv').value=s[6];
+  $('nt').value=`Selected Service from Catalog: ${s[5]} (Base Rate approx ${s[2]} AED).`;$('booking').scrollIntoView({behavior:'smooth'});}
+function estToBooking(){$('nt').value=`Estimated Quotation: ${$('total').textContent} AED for Category: ${catTitle}.`;$('booking').scrollIntoView({behavior:'smooth'});}
+
+const today=new Date().toISOString().split('T')[0];$('dt').min=today;$('dt').value=today;calc();
+
+function book(e){e.preventDefault();
+  const v=id=>$(id).value,plate=v('pl')||'Standard',ref='ALSAMA-2026-'+Math.floor(1000+Math.random()*9000);
+  $('rRef').textContent=ref;$('rName').textContent=v('cn');$('rCar').textContent=`${v('mk')} ${v('md')} (${plate})`;
+  $('rDt').textContent=`${v('dt')} at ${v('tm')}`;$('rSv').textContent=v('sv');
+  const msg=encodeURIComponent(`*AL SAMA AUTO BOOKING*\n\n*Job Ref:* ${ref}\n*Name:* ${v('cn')}\n*Phone:* ${v('cp')}\n*Vehicle:* ${v('mk')} ${v('md')} (Plate: ${plate})\n*Service:* ${v('sv')}\n*Date & Slot:* ${v('dt')} @ ${v('tm')}\n*Notes:* ${v('nt')||'None'}\n\nPlease confirm my workshop bay reservation. Thank you!`);
+  $('rWa').href='https://wa.me/971564580084?text='+msg;$('done').classList.add('show');}
+function closeDone(){$('done').classList.remove('show');$('bf').reset();$('dt').value=today;}
+</script>
+</body>
+</html>
