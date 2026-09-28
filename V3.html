@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AL SAMA AUTO | ورشة طيور السماء</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0C1116;--red:#E63946;--bg:#F4F5F7;--w:#fff;--mute:#667085;--line:#E1E4E9;--ok:#1E9E62}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;color:var(--ink);background:var(--w);line-height:1.6}
+h1,h2,h3,.sg{font-family:'Space Grotesk',sans-serif}
+.ar{font-family:Cairo,sans-serif;direction:rtl}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;border:0;border-radius:999px;padding:14px 28px;font:600 15px Inter;text-decoration:none;cursor:pointer;transition:.2s}
+.btn:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.btn.ghost{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(6px)}
+.btn.line{background:none;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.wa{background:#1FA855}
+.btn.sm{padding:9px 18px;font-size:14px}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s;color:#fff}
+header.solid{background:rgba(12,17,22,.92);backdrop-filter:blur(10px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font:700 22px 'Space Grotesk';text-decoration:none;letter-spacing:.02em}
+.logo b{color:var(--red)}
+.logo small{display:block;font:600 12px Cairo;color:#c5ccd6;line-height:1}
+nav{display:flex;gap:28px;font-size:14px;font-weight:500}
+nav a{text-decoration:none;opacity:.85}nav a:hover{opacity:1;color:#fff}
+#burger{display:none;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:8px;font-size:22px;padding:2px 10px;cursor:pointer}
+#mnav{display:none;background:var(--ink);padding:10px 24px 20px}
+#mnav a{display:block;padding:10px 0;color:#fff;text-decoration:none;font-weight:500;border-bottom:1px solid #222b35}
+@media(max-width:960px){nav,.hcta{display:none}#burger{display:block}#mnav.open{display:block}}
+
+.hero{position:relative;min-height:100vh;color:#fff;display:flex;align-items:flex-end;background:#16202b url('./workshop-bay.jpeg') center/cover no-repeat;padding:0}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,17,22,.55) 0%,rgba(12,17,22,.35) 35%,rgba(12,17,22,.92) 100%)}
+.hero .wrap{position:relative;padding-top:140px;padding-bottom:40px;width:100%}
+.hero .tag{display:inline-block;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:6px 16px;font-size:13px;backdrop-filter:blur(6px)}
+h1{font-size:clamp(44px,8vw,104px);line-height:.98;font-weight:700;letter-spacing:-.03em;margin:22px 0 14px;max-width:11ch}
+.hero .ar{font-size:clamp(18px,2.4vw,26px);font-weight:700;color:#ffd9dc;margin-bottom:14px}
+.hero .lead{max-width:60ch;color:#d3d9e2;margin-bottom:30px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:56px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.25);padding-top:22px;gap:20px}
+.facts b{display:block;font:700 34px 'Space Grotesk'}
+.facts span{font-size:13px;color:#c5ccd6}
+@media(max-width:700px){.facts{grid-template-columns:1fr 1fr}}
+.trust{background:var(--ink);color:#c5ccd6;font-size:14px}
+.trust .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px;padding-top:16px;padding-bottom:16px}
+.trust b{color:#fff;font-weight:600}
+
+.two{display:grid;grid-template-columns:.8fr 1.6fr;gap:64px;align-items:start}
+@media(max-width:900px){.two{grid-template-columns:1fr;gap:32px}}
+.stick{position:sticky;top:110px}
+h2{font-size:clamp(32px,4vw,52px);line-height:1.05;font-weight:700;letter-spacing:-.02em}
+.sub{color:var(--mute);margin-top:12px}
+.ar.sub{color:var(--red);font-weight:700}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.tabs button{font:500 14px Inter;padding:8px 16px;border:1.5px solid var(--line);border-radius:999px;background:none;cursor:pointer;color:var(--ink)}
+.tabs button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.row{display:grid;grid-template-columns:1fr auto;gap:8px 24px;padding:26px 0;border-bottom:1px solid var(--line);align-items:center}
+.row:first-child{border-top:1px solid var(--line)}
+.row h3{font-size:24px;font-weight:600;line-height:1.2}
+.row .ar{color:var(--red);font-size:15px;font-weight:600}
+.row p{font-size:14px;color:var(--mute);max-width:62ch;margin-top:4px}
+.row .pr{text-align:right}
+.row .pr b{display:block;font:700 26px 'Space Grotesk'}
+.row .pr small{color:var(--mute);font-size:12px}
+.row .btn{margin-top:8px}
+@media(max-width:600px){.row{grid-template-columns:1fr}.row .pr{text-align:left;display:flex;align-items:center;gap:16px}.row .btn{margin:0}}
+
+#estimator{background:var(--bg)}
+.est{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;margin-top:44px;align-items:start}
+@media(max-width:900px){.est{grid-template-columns:1fr}}
+.lbl{font:600 18px 'Space Grotesk';margin-bottom:14px}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:34px}
+.cat{background:var(--w);border:2px solid transparent;border-radius:14px;padding:16px;text-align:left;cursor:pointer;font:inherit;color:var(--ink);box-shadow:0 1px 3px rgba(12,17,22,.06)}
+.cat b{display:block}.cat small{color:var(--mute);font-size:12px}
+.cat.on{border-color:var(--red)}
+.opt{display:flex;justify-content:space-between;gap:14px;align-items:center;padding:16px 18px;background:var(--w);border:2px solid transparent;border-radius:14px;margin-bottom:12px;cursor:pointer}
+.opt:has(input:checked){border-color:var(--red)}
+.opt input{accent-color:var(--red);width:19px;height:19px;margin-right:14px;vertical-align:middle}
+.opt small{display:block;color:var(--mute);font-size:13px;margin-left:33px}
+.opt em{font:700 16px 'Space Grotesk';font-style:normal;white-space:nowrap}
+.sum{position:sticky;top:100px;background:var(--ink);color:#fff;border-radius:22px;padding:32px}
+.sum h3{font-size:20px;font-weight:600;margin-bottom:16px}
+.sum .r{display:flex;justify-content:space-between;gap:10px;font-size:14px;padding:6px 0;border-bottom:1px solid #222b35}
+.sum .r span{color:#98a2b3}
+.tot{font:700 76px/1 'Space Grotesk';margin:26px 0 20px}
+.tot small{font-size:22px;color:#98a2b3;margin-left:6px}
+
+.dark{background:var(--ink);color:#fff}
+.dark .sub{color:#98a2b3}.dark .ar.sub{color:#ff8a93}
+.rest{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center;margin-top:48px}
+@media(max-width:900px){.rest{grid-template-columns:1fr}}
+.cmp{position:relative;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#1c2530;user-select:none}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.clip{position:absolute;inset:0;clip-path:inset(0 50% 0 0)}
+.cmp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.hd{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;pointer-events:none}
+.hd::after{content:"\2194";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;font-size:20px;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+.lb{position:absolute;top:16px;padding:5px 14px;border-radius:999px;font:600 12px Inter;color:#fff;pointer-events:none}
+.lb.l{left:16px;background:var(--red)}.lb.r{right:16px;background:var(--ok)}
+.rest h3{font-size:28px;font-weight:600;line-height:1.15;margin-bottom:12px}
+.rest p{color:#b6bfcc;font-size:15px}
+.chk{margin:16px 0 22px;font-size:14px;color:#7ee2b1;font-weight:600}
+.vid{margin-top:64px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+@media(max-width:900px){.vid{grid-template-columns:1fr}}
+.vid video{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:20px;background:#1c2530;display:block}
+.quick{margin-top:64px;border-top:1px solid #222b35;padding-top:32px;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+.quick h4{font:600 24px 'Space Grotesk'}
+.quick p{color:#98a2b3;font-size:14px}
+
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px;margin-top:48px}
+.why div{border-top:3px solid var(--red);padding-top:22px}
+.why h3{font-size:22px;font-weight:600;line-height:1.2}
+.why .ar{color:var(--red);font-size:15px;font-weight:600;margin:4px 0 10px}
+.why p{font-size:14px;color:var(--mute)}
+
+#booking{background:var(--bg);padding:0}
+.bk{display:grid;grid-template-columns:.85fr 1.15fr}
+@media(max-width:960px){.bk{grid-template-columns:1fr}}
+.side{position:relative;color:#fff;background:#16202b url('./workshop-signboard.jpeg') center/cover;min-height:560px;display:flex;align-items:flex-end}
+.side::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,17,22,.25),rgba(12,17,22,.94))}
+.side>div{position:relative;padding:40px}
+.side h3{font-size:26px;font-weight:600}
+.side .ar{color:#ffd9dc;font-weight:700}
+.side dl{margin-top:22px;display:grid;gap:14px;font-size:14px}
+.side dt{color:#98a2b3;font-size:12px}
+.side dd{margin:0;font-weight:600}
+.side .off{color:#ff8a93}
+.fm{padding:72px 48px;position:relative}
+@media(max-width:600px){.fm{padding:48px 20px}}
+form{margin-top:30px;position:relative}
+.f{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-bottom:16px}
+label{display:block;font-weight:600;font-size:13px;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:15px;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+#done{display:none;position:absolute;inset:-12px;background:var(--bg);flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:12px;z-index:5}
+#done.show{display:flex}
+#done .box{background:#fff;border-radius:16px;padding:18px;width:100%;max-width:480px;text-align:left;font-size:14px}
+#done .r{display:flex;justify-content:space-between;gap:10px;padding:4px 0}
+
+.map{position:relative}
+.map iframe{display:block;width:100%;height:440px;border:0;background:#dfe5ec}
+.mc{position:absolute;left:max(24px,calc(50% - 576px));bottom:24px;background:#fff;border-radius:16px;padding:20px 24px;box-shadow:0 12px 40px rgba(0,0,0,.2);max-width:340px;font-size:14px}
+.mc b{font:600 18px 'Space Grotesk'}
+@media(max-width:600px){.mc{position:static;max-width:none;border-radius:0}}
+footer{background:var(--ink);color:#98a2b3;padding:32px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+footer a{color:#fff;font-weight:600}
+.fab{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:40}
+.fab a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font:600 13px Inter;text-decoration:none;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header id="hd0">
+  <div class="wrap">
+    <a href="#" class="logo">AL SAMA <b>AUTO</b><small class="ar">السماء للسيارات</small></a>
+    <nav><a href="#services">Services</a><a href="#estimator">Cost Estimator</a><a href="#restorations">Restorations</a><a href="#why-us">Why Us</a><a href="#booking">Booking</a><a href="#contact">Location</a></nav>
+    <div class="hcta" style="display:flex;gap:10px"><a class="btn wa sm" target="_blank" href="https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto,%20I%20would%20like%20to%20inquire%20about%20car%20service">WhatsApp</a><a class="btn sm" href="#booking">Book Service</a></div>
+    <button id="burger" aria-label="Menu" onclick="document.getElementById('mnav').classList.toggle('open')">&#9776;</button>
+  </div>
+  <div id="mnav" onclick="this.classList.remove('open')"><a href="#services">Automotive Services</a><a href="#estimator">Price Calculator (AED)</a><a href="#restorations">Before &amp; After</a><a href="#why-us">Why Choose Us</a><a href="#booking">Book Appointment</a><a href="#contact">Location</a><a href="tel:+971564580084">Call +971 56 458 0084</a></div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Sharjah certified workshop &bull; German, Japanese &amp; American auto care</span>
+    <h1>Al Sama Auto Maintenance in Sharjah</h1>
+    <div class="ar">السماء للسيارات &ndash; دقة، أمانة، وأداء مثالي لكل رحلة</div>
+    <p class="lead">Specialized in high-temperature UAE climate conditioning, computerized OBD-II engine and transmission diagnostics, chassis straightening, accident rebuilding, and certified major servicing.</p>
+    <div class="cta"><a class="btn" href="#booking">Book Bay Inspection</a><a class="btn ghost" href="#estimator">Estimate Repair Cost (AED)</a></div>
+    <div class="facts">
+      <div><b>15,000+</b><span>Vehicles serviced</span></div>
+      <div><b>100%</b><span>Transparent invoicing</span></div>
+      <div><b>4.9 / 5.0</b><span>Customer satisfaction</span></div>
+      <div><b>12 Mo</b><span>Labor guarantee</span></div>
+    </div>
+  </div>
+</section>
+<div class="trust"><div class="wrap">
+  <span><b>Genuine OEM</b> parts with warranty</span><span><b>Gulf AC experts</b> sub-zero cooling</span><span><b>Live diagnostics</b> dealer-level scanners</span><span><b>Fast turnaround</b> same-day express</span>
+</div></div>
+
+<section id="services"><div class="wrap two">
+  <div class="stick">
+    <h2>Our Workshop Specialties</h2>
+    <p class="ar sub">خدمات شاملة لصيانة وتصليح جميع أنواع المركبات بأعلى معايير الجودة والضمان</p>
+    <p class="sub">Engineered for UAE conditions.</p>
+    <div class="tabs" id="tabs"><button class="on" data-c="all">All Services</button><button data-c="ac-engine">AC &amp; Engine</button><button data-c="brakes-suspension">Brakes &amp; Suspension</button><button data-c="maintenance">Periodic Service</button></div>
+  </div>
+  <div id="svcList"></div>
+</div></section>
+
+<section id="estimator"><div class="wrap">
+  <h2>Interactive AED Cost Estimator</h2>
+  <p class="ar sub">حاسبة تكاليف صيانة السيارات الفورية بالدرهم الإماراتي بدون رسوم مخفية</p>
+  <div class="est">
+    <div>
+      <div class="lbl">1. Select vehicle category / نوع السيارة</div><div class="cats" id="cats"></div>
+      <div class="lbl">2. Choose service items / اختر الخدمات المطلوبة</div><div id="opts"></div>
+    </div>
+    <div class="sum">
+      <h3>Quotation Summary (AED)</h3>
+      <div class="r"><span>Category</span><b id="dCat">Economy / Compact Sedan</b></div>
+      <div class="r"><span>Multiplier</span><b id="dMul">1.0x</b></div>
+      <div class="r"><span>Bay labor &amp; tools</span><b>Included</b></div>
+      <div class="r"><span>Estimated completion</span><b id="dDur">1.5 &ndash; 2.0 Hours</b></div>
+      <div class="tot"><span id="total">220</span><small>AED</small></div>
+      <button class="btn" style="width:100%;justify-content:center" onclick="estToBooking()">Book Bay With This Estimate</button>
+    </div>
+  </div>
+</div></section>
+
+<section id="restorations" class="dark"><div class="wrap">
+  <h2>Accident Restorations &amp; Oven Baking</h2>
+  <p class="ar sub">إصلاح حوادث السيارات وتعديل الشاصي والصبغ الحراري داخل الفرن</p>
+  <p class="sub">From heavy structural rebuilding to dust-free thermal oven baking with a showroom mirror finish.</p>
+  <div class="rest">
+    <div class="cmp" id="cmp">
+      <img src="./accident-1-after.jpeg" alt="Mercedes restored after">
+      <div class="clip" id="clip"><img src="./accident-1-before.jpeg" alt="Mercedes damage before"></div>
+      <div class="hd" id="hd"></div>
+      <b class="lb l">Before: crash damage</b><b class="lb r">After: restored &amp; painted</b>
+      <input type="range" min="0" max="100" value="50" id="rng" aria-label="Drag to compare before and after">
+    </div>
+    <div>
+      <h3>Mercedes-Benz C-Class: Structural Chassis Rebuild</h3>
+      <p>Complete rocker panel alignment, new suspension control arms, bumper and fender calibration, followed by computerized metallic paint matching.</p>
+      <div class="chk">&#10003; Passed UAE inspection guaranteed</div>
+      <a class="btn" target="_blank" href="https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto,%20I%20saw%20your%20Mercedes%20restoration%20and%20want%20a%20bodywork%20quote">Inquire on WhatsApp</a>
+    </div>
+  </div>
+  <div class="vid">
+    <div>
+      <h3 style="font-size:28px;font-weight:600;line-height:1.15;margin-bottom:12px">Complete Vehicle Respray &amp; High-Gloss Clear Coat</h3>
+      <p style="color:#b6bfcc;font-size:15px">Full car masking, multi-layer scratch filling, computerized paint mixing, followed by high-temperature dust-free oven baking for a zero orange-peel finish.</p>
+      <div class="chk">&#10003; 3-year warranty against peeling &amp; fading</div>
+      <a class="btn" target="_blank" href="https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto,%20I%20want%20a%20quote%20for%20a%20full%20car%20paint%20booth%20respray">Inquire on WhatsApp</a>
+    </div>
+    <video autoplay muted loop playsinline controls poster="./accident-1-after.jpeg"><source src="./paint-booth-finish.mp4" type="video/mp4"></video>
+  </div>
+  <div class="quick">
+    <div><h4>Need denting, chassis pulling, or oven painting?</h4><p>Send clear photos or a video of the damaged vehicle on WhatsApp for a fast preliminary repair estimate.</p></div>
+    <a class="btn wa" target="_blank" href="https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto,%20I%20have%20an%20accident%20car%20and%20want%20to%20share%20photos%20for%20a%20repair%20quote">WhatsApp Accident Media</a>
+  </div>
+</div></section>
+
+<section id="why-us"><div class="wrap">
+  <h2>Why Drivers Trust Our Workshop</h2>
+  <p class="ar sub">لماذا يختار السائقون ورشة طيور السماء لصيانة سياراتهم في الشارقة؟</p>
+  <div class="why">
+    <div><h3>Master Technicians</h3><div class="ar">مهندسون وفنيون ذوو خبرة</div><p>Decades of combined hands-on experience dealing with Middle East climate conditions and high desert ambient heat.</p></div>
+    <div><h3>Honest Transparent Pricing</h3><div class="ar">أسعار واضحة بدون مصاريف مخفية</div><p>No work is started without an upfront itemized written quote. Photos and videos are shared with you via WhatsApp.</p></div>
+    <div><h3>Dealer-Grade Technology</h3><div class="ar">أجهزة فحص إلكترونية حديثة</div><p>Factory-level scan tools capable of reprogramming electronic control modules, sensor calibrations, and gearbox adaptations.</p></div>
+    <div><h3>Comprehensive Warranty</h3><div class="ar">ضمان حقيقي على قطع الغيار والأيدي العاملة</div><p>We stand behind every repair. All fitted components and mechanical work are backed by a certified garage warranty.</p></div>
+  </div>
+</div></section>
+
+<section id="booking"><div class="bk">
+  <div class="side" id="contact-side"><div>
+    <h3>AL SAMA AUTO</h3><div class="ar">ورشة طيور السماء لصيانة السيارات</div>
+    <dl>
+      <div><dt>Workshop location</dt><dd>Industrial Area, Sharjah, UAE</dd></div>
+      <div><dt>Working hours</dt><dd>Saturday &ndash; Thursday, 9:00 AM &ndash; 9:00 PM<br><span class="off">Friday: Closed</span></dd></div>
+      <div><dt>Mobile / WhatsApp</dt><dd><a href="tel:+971564580084">+971 56 458 0084</a></dd></div>
+    </dl>
+    <p style="margin-top:16px;font-size:13px;color:#98a2b3">Instant WhatsApp support, drop-off bookings, and preliminary cost quotations. Look for this signboard when arriving at our Sharjah facility.</p>
+  </div></div>
+  <div class="fm">
+    <h2 style="font-size:clamp(28px,3vw,40px)">Schedule Your Car Maintenance</h2>
+    <p class="ar sub">احجز موعد الصيانة الخاص بك وسيتم تجهيز فتحة الفحص فور وصولك</p>
+    <form id="bf" onsubmit="book(event)">
+      <div class="f">
+        <div><label for="cn">Customer name / الاسم الكامل *</label><input id="cn" required placeholder="e.g. Faisal Hanif"></div>
+        <div><label for="cp">UAE mobile / WhatsApp (+971) *</label><input id="cp" type="tel" required placeholder="+971 56 458 0084"></div>
+      </div>
+      <div class="f">
+        <div><label for="mk">Car make / الشركة المصنعة *</label><input id="mk" required placeholder="e.g. Mercedes, Nissan, Toyota"></div>
+        <div><label for="md">Model &amp; year / الموديل والسنة *</label><input id="md" required placeholder="e.g. C-Class / 2023"></div>
+        <div><label for="pl">Emirate / plate code</label><input id="pl" placeholder="e.g. Sharjah 5 - 3137"></div>
+      </div>
+      <div class="f">
+        <div><label for="sv">Required service / نوع الخدمة *</label><select id="sv" required>
+          <option value="Accident Body Repair & Oven Paint">Accident Body Repair &amp; Oven Paint</option>
+          <option value="Periodic Minor/Major Service">Periodic Minor/Major Service (دورية)</option>
+          <option value="UAE Climate AC Overhaul">UAE AC Overhaul &amp; Cooling (مكيف)</option>
+          <option value="Brake System & Disc Service">Brakes &amp; Discs (فرامل وسفايف)</option>
+          <option value="Computer Diagnostics & Scans">Computer Diagnostics (فحص كمبيوتر)</option>
+          <option value="Suspension & Alignment">Suspension &amp; 4x4 (شاصي ومساعدات)</option></select></div>
+        <div><label for="dt">Preferred date / تاريخ الحجز *</label><input id="dt" type="date" required></div>
+        <div><label for="tm">Time slot / الوقت المناسب *</label><select id="tm" required>
+          <option value="09:30 AM - Morning Slot">09:30 AM (Morning drop-off)</option>
+          <option value="11:30 AM - Midday Slot">11:30 AM (Midday bay)</option>
+          <option value="03:00 PM - Afternoon Slot">03:00 PM (Afternoon express)</option>
+          <option value="06:00 PM - Evening Slot">06:00 PM (Evening quick slot)</option></select></div>
+      </div>
+      <div style="margin-bottom:18px"><label for="nt">Vehicle issues / damage notes (ملاحظات الأعطال)</label><textarea id="nt" rows="3" placeholder="Describe any accident damage, warning lights, or mechanical symptoms..."></textarea></div>
+      <button class="btn" style="width:100%;justify-content:center" type="submit">Confirm Reservation &amp; Open WhatsApp Dispatch</button>
+      <div id="done">
+        <b style="color:var(--ok)">Workshop booking verified</b>
+        <h3 style="font-size:28px">Al Sama Auto Job Card Reserved</h3>
+        <div class="ar" style="font-weight:700">تم تأكيد حجزك في ورشة السماء للسيارات بنجاح</div>
+        <div class="box">
+          <div class="r"><span>Job reference</span><b id="rRef"></b></div><div class="r"><span>Client</span><b id="rName"></b></div>
+          <div class="r"><span>Vehicle</span><b id="rCar"></b></div><div class="r"><span>Date &amp; slot</span><b id="rDt"></b></div><div class="r"><span>Service</span><b id="rSv"></b></div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center"><a id="rWa" class="btn wa" target="_blank" href="#">Send To Workshop WhatsApp</a><button type="button" class="btn line" onclick="closeDone()">Done / Close</button></div>
+      </div>
+    </form>
+  </div>
+</div></section>
+
+<div class="map" id="contact">
+  <iframe src="https://maps.google.com/maps?q=25.3108911,55.4036854&z=16&output=embed" title="Map" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="mc"><b>Workshop Bay &amp; Location</b><div class="ar" style="color:var(--red);font-weight:700">موقع ورشة طيور السماء لصيانة السيارات</div>Industrial Area, Sharjah, UAE<br><span style="color:var(--mute)">Coordinates: 25.3108911, 55.4036854</span><br><a class="btn sm" style="margin-top:12px" target="_blank" href="https://maps.google.com/maps?q=25.3108911%2C55.4036854&z=17&hl=en">Start Navigation</a></div>
+</div>
+
+<footer><div class="wrap">
+  <div><b style="color:#fff">AL SAMA AUTO</b> &bull; <span class="ar">ورشة طيور السماء</span><br>&copy; 2026 All Rights Reserved. Designed &amp; Developed by <a href="https://github.com/MuhammadFaisalHanif" target="_blank">Faisal</a></div>
+  <a href="#booking">Book an Appointment</a>
+</div></footer>
+
+<div class="fab">
+  <a style="background:#1FA855" target="_blank" title="WhatsApp Workshop" href="https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto,%20I%20would%20like%20to%20inquire%20about%20car%20service">WA</a>
+  <a style="background:var(--red)" href="tel:+971564580084" title="Call Workshop">Call</a>
+</div>
+
+<script>
+const SERVICES=[
+["ac-engine","UAE Climate AC Overhaul",180,"صيانة وتعبئة مكيفات السيارات والتبريد الفائق","Heavy-duty recovery and recharge of R134a refrigerants, evaporator leak checks, compressor clutch testing, condenser chemical wash, and cabin disinfection designed to beat 50°C summer heat.","AC Overhaul & Climate Control","UAE Climate AC Overhaul","Book AC Service"],
+["ac-engine","Computerized Diagnostics",150,"فحص وبرمجة كمبيوتر السيارات وكشف الأعطال","OEM scanners for Mercedes, BMW, Audi, Lexus, Patrol, Land Cruiser. Comprehensive engine check light analysis, live sensor readings, and module adaptation resets.","Computer Diagnostics & Scans","Computer Diagnostics & Scans","Book Diagnostic Bay"],
+["brakes-suspension","Brake Discs & Resurfacing",200,"تبديل وتخريطه سفايف وفرامل وضبط الأمان","Ceramic high-heat brake pads replacement, on-car rotor skim resurfacing to eliminate vibration at highway speeds, and DOT 4 pressure bleeding.","Brake System & Disc Service","Brake System & Disc Service","Book Brake Service"],
+["brakes-suspension","Suspension & 4x4 Off-Road",250,"صيانة الشاصي والمساعدات والمساعدات الهيدروليكية","Shock absorbers, air suspension struts, tie rods, control arm bushings, steering racks, and 3D computer wheel alignment configured for UAE cruising and dunes.","Suspension & Alignment","Suspension & Alignment","Book Suspension Work"],
+["maintenance","Minor & Major Periodic Service",220,"صيانة دورية دورية كبرى وصغرى بزيوت أصلية معتمدة","Fully synthetic engine oil (Liqui Moly / Castrol), OEM oil and air filters, iridium spark plugs, coolant top-up, and comprehensive 50-point inspection.","Periodic Minor/Major Service","Periodic Minor/Major Service","Book Periodic Service"],
+["ac-engine","Transmission & Gearbox Care",350,"صيانة الجير الأوتوماتيكي وتغيير زيت الفتيس والفلتر","Transmission fluid flush, mechatronic troubleshooting, torque converter checks, valve body inspection, and replacement of internal filters and pans.","Transmission & Gearbox Repair","","Book Gearbox Inspection"]
+];
+const CATS=[[1.0,"Economy / Compact Sedan","Sedan","Corolla, Civic, Sunny"],[1.3,"Midsize SUV / Crossover","Midsize SUV","RAV4, Prado, Tucson"],[1.7,"Luxury / European Performance","Luxury / Euro","BMW, Merc, Porsche"],[1.5,"4x4 Off-road / Patrol & Land Cruiser","Heavy 4x4","Patrol, LC300, Tahoe"]];
+const OPTS=[[220,"Synthetic Oil Change & Genuine Filter","Liqui Moly / Castrol + 50-point complimentary inspection",1],[200,"Brake Pad Replacement & Rotor Skimming","Front axle ceramic pads + vibration elimination lathe work",0],[180,"AC Gas Top-Up, Refrigerant Recovery & Leak Check","High-efficiency climate prep + cabin odor sterilization",0],[150,"Deep OBD-II Diagnostic Scan & Health Report","Engine, gearbox, ABS, airbag sensor fault identification",0]];
+let mult=1.0,catTitle=CATS[0][1];
+const $=id=>document.getElementById(id);
+
+$('svcList').innerHTML=SERVICES.map((s,i)=>`<div class="row" data-c="${s[0]}"><div><h3>${s[1]}</h3><div class="ar">${s[3]}</div><p>${s[4]}</p></div><div class="pr"><div><small>From</small><b>${s[2]} AED</b></div><button class="btn sm line" onclick="prefill(${i})">${s[7]}</button></div></div>`).join('');
+$('tabs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('#svcList .row').forEach(r=>r.style.display=(b.dataset.c==='all'||r.dataset.c===b.dataset.c)?'grid':'none');});
+
+$('cats').innerHTML=CATS.map((c,i)=>`<button type="button" class="cat${i?'':' on'}" onclick="pickCat(${i},this)"><b>${c[2]}</b><small>${c[3]}</small></button>`).join('');
+$('opts').innerHTML=OPTS.map(o=>`<label class="opt"><span><input type="checkbox" class="ck" value="${o[0]}" ${o[3]?'checked':''} onchange="calc()"><b>${o[1]}</b><small>${o[2]}</small></span><em>${o[0]} AED</em></label>`).join('');
+function pickCat(i,el){mult=CATS[i][0];catTitle=CATS[i][1];document.querySelectorAll('.cat').forEach(b=>b.classList.toggle('on',b===el));$('dCat').textContent=catTitle;$('dMul').textContent=mult.toFixed(1)+'x';calc();}
+function calc(){let base=0,h=0;document.querySelectorAll('.ck:checked').forEach(c=>{base+=+c.value;h+=0.6});
+  if(!base){$('total').textContent='0';$('dDur').textContent='No item selected';return}
+  $('total').textContent=Math.round(base*mult);$('dDur').textContent=`${h.toFixed(1)} - ${(h+0.8).toFixed(1)} Hours`;}
+function prefill(i){const s=SERVICES[i];if(s[6])$('sv').value=s[6];$('nt').value=`Selected Service from Catalog: ${s[5]} (Base Rate approx ${s[2]} AED).`;$('booking').scrollIntoView({behavior:'smooth'});}
+function estToBooking(){$('nt').value=`Estimated Quotation: ${$('total').textContent} AED for Category: ${catTitle}.`;$('booking').scrollIntoView({behavior:'smooth'});}
+
+$('rng').addEventListener('input',e=>{const v=e.target.value;$('clip').style.clipPath=`inset(0 ${100-v}% 0 0)`;$('hd').style.left=v+'%';});
+const hdr=$('hd0');const onScroll=()=>hdr.classList.toggle('solid',scrollY>60);addEventListener('scroll',onScroll);onScroll();
+
+const today=new Date().toISOString().split('T')[0];$('dt').min=today;$('dt').value=today;calc();
+function book(e){e.preventDefault();
+  const v=id=>$(id).value,plate=v('pl')||'Standard',ref='ALSAMA-2026-'+Math.floor(1000+Math.random()*9000);
+  $('rRef').textContent=ref;$('rName').textContent=v('cn');$('rCar').textContent=`${v('mk')} ${v('md')} (${plate})`;$('rDt').textContent=`${v('dt')} at ${v('tm')}`;$('rSv').textContent=v('sv');
+  const msg=encodeURIComponent(`*AL SAMA AUTO BOOKING*\n\n*Job Ref:* ${ref}\n*Name:* ${v('cn')}\n*Phone:* ${v('cp')}\n*Vehicle:* ${v('mk')} ${v('md')} (Plate: ${plate})\n*Service:* ${v('sv')}\n*Date & Slot:* ${v('dt')} @ ${v('tm')}\n*Notes:* ${v('nt')||'None'}\n\nPlease confirm my workshop bay reservation. Thank you!`);
+  $('rWa').href='https://wa.me/971564580084?text='+msg;$('done').classList.add('show');}
+function closeDone(){$('done').classList.remove('show');$('bf').reset();$('dt').value=today;}
+</script>
+</body>
+</html>
