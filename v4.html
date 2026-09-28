@@ -3,24 +3,434 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AL SAMA AUTO | ورشة طيور السماء</title>
+  <title>AL SAMA AUTO | ورشة طيور السماء — Precision Auto Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Chakra+Petch:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Chakra Petch"', 'sans-serif'],
+            arabic: ['Cairo', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #070a0f;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+    body { background-color: #070a0f; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+    .font-display { font-family: 'Chakra Petch', sans-serif; }
+    .font-arabic { font-family: 'Cairo', sans-serif; }
+    .font-mono-nums { font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums; }
   </style>
 </head>
-<body>
-  <iframe src="https://ais-pre-lblzozqmsg4cudwdrclbt3-320501210319.europe-west3.run.app"></iframe>
+<body class="selection:bg-amber-400 selection:text-neutral-950">
+
+  <!-- TOP BAR -->
+  <div class="bg-[#03060a] border-b border-neutral-800 text-xs py-2.5 px-4 text-neutral-400">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1.5 text-emerald-400 font-semibold">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Open Sat–Thu: 9:00 AM – 9:00 PM</span>
+        </span>
+        <span class="text-neutral-700 hidden sm:inline">|</span>
+        <a href="https://maps.google.com/?q=25.2974757,55.4054199" target="_blank" class="hover:text-amber-400 transition-colors">
+          📍 Industrial Area, Sharjah • UAE
+        </a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+971564580084" class="text-white hover:text-amber-400 font-bold font-mono-nums">
+          📞 +971 56 458 0084
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-[#070a0f]/90 backdrop-blur-md border-b border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-neutral-950 font-black text-2xl shadow-lg shadow-amber-500/20">
+          ⚙
+        </div>
+        <div>
+          <div class="font-display font-black text-xl text-white tracking-wider uppercase">
+            AL SAMA <span class="text-amber-400">AUTO</span>
+          </div>
+          <div class="font-arabic text-xs text-amber-300 font-bold -mt-1">
+            ورشة طيور السماء لصيانة السيارات
+          </div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-6 text-xs font-bold uppercase tracking-wider text-neutral-300">
+        <a href="#services" class="hover:text-amber-400 transition-colors">Services</a>
+        <a href="#estimator" class="hover:text-amber-400 transition-colors">AED Calculator</a>
+        <a href="#restorations" class="hover:text-amber-400 transition-colors">Before / After</a>
+        <a href="#tracker" class="hover:text-amber-400 transition-colors">Job Card Tracker</a>
+        <a href="#contact" class="hover:text-amber-400 transition-colors">Map &amp; Entrance</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto" target="_blank" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-lg shadow-emerald-600/20">
+          <span>WhatsApp</span>
+        </a>
+        <a href="#estimator" class="px-4 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-neutral-950 font-display font-black text-xs uppercase tracking-wider">
+          Book Inspection
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="py-16 md:py-24 border-b border-neutral-800 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900 border border-amber-400/30 text-xs font-semibold text-amber-300">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+          Sharjah Licensed Facility • German, Japanese &amp; American Cars
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black uppercase text-white leading-tight">
+          Precision Auto Care &amp; <br/>
+          <span class="text-amber-400">Performance Overhaul</span>
+        </h1>
+
+        <div class="font-arabic text-2xl sm:text-3xl text-neutral-200 font-extrabold">
+          ورشة طيور السماء – دقة متناهية، أمانة مطلقة، وأداء استثنائي
+        </div>
+
+        <p class="text-neutral-300 text-sm sm:text-base max-w-xl">
+          Industrial Area, Sharjah's specialized diagnostic and restoration center. Conquering 50°C UAE summer heat with precision AC recovery, computerized module coding, chassis realignment, and pressurized thermal paint baking.
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+          <div class="p-3 rounded-xl bg-neutral-900 border border-neutral-800">
+            <div class="text-emerald-400 text-lg mb-1">🛡️</div>
+            <div class="text-xs font-bold text-white font-display uppercase">Genuine OEM</div>
+            <div class="text-[10px] text-neutral-400">Parts with Warranty</div>
+          </div>
+          <div class="p-3 rounded-xl bg-neutral-900 border border-neutral-800">
+            <div class="text-sky-400 text-lg mb-1">❄️</div>
+            <div class="text-xs font-bold text-white font-display uppercase">Gulf AC Master</div>
+            <div class="text-[10px] text-neutral-400">50°C Sub-Zero Chill</div>
+          </div>
+          <div class="p-3 rounded-xl bg-neutral-900 border border-neutral-800">
+            <div class="text-amber-400 text-lg mb-1">💻</div>
+            <div class="text-xs font-bold text-white font-display uppercase">Diagnostics</div>
+            <div class="text-[10px] text-neutral-400">Live Scanners</div>
+          </div>
+          <div class="p-3 rounded-xl bg-neutral-900 border border-neutral-800">
+            <div class="text-amber-300 text-lg mb-1">⚡</div>
+            <div class="text-xs font-bold text-white font-display uppercase">Express Bay</div>
+            <div class="text-[10px] text-neutral-400">Same-Day Service</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-4 pt-4">
+          <a href="#estimator" class="px-7 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-neutral-950 font-display font-extrabold uppercase tracking-wider text-xs">
+            Estimate Repair Cost (AED) →
+          </a>
+          <a href="tel:+971564580084" class="px-7 py-3.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-xs border border-neutral-700">
+            Call Workshop Dispatch
+          </a>
+        </div>
+      </div>
+
+      <!-- Workshop Bay Photo -->
+      <div class="lg:col-span-5">
+        <div class="rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl relative">
+          <img src="/workshop-bay.jpeg" alt="Al Sama Auto Workshop Bay" class="w-full h-[400px] object-cover" onerror="this.src='https://images.unsplash.com/photo-1613214149922-f1809c99b414?auto=format&fit=crop&w=1000&q=80'">
+          <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-transparent">
+            <div class="text-xs font-bold text-amber-400 font-display uppercase">Sharjah Hydraulic Bay Facility</div>
+            <div class="text-[11px] text-neutral-300">Live multi-vehicle lifts, computerized diagnostic alignment, and thermal spray booth</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESTORATIONS (BEFORE / AFTER & VIDEO) -->
+  <section id="restorations" class="py-20 border-b border-neutral-800 bg-[#070a0f]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Documented Rebuilds • الشارقة</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white uppercase mt-1">Collision Restoration &amp; Paint Finish</h2>
+        <p class="font-arabic text-amber-300/80 text-sm font-semibold mt-1">إعادة بناء الحوادث ورش حراري متقدم بأعلى مواصفات المصنع</p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+        <div class="lg:col-span-7 bg-neutral-900/60 rounded-2xl border border-neutral-800 p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold text-white uppercase font-display">Mercedes-Benz Frontal Collision</span>
+              <span class="text-xs text-emerald-400 font-mono-nums font-bold">100% Factory Realigned</span>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="rounded-xl overflow-hidden border border-neutral-800 relative">
+                <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-rose-600/90 text-white text-[10px] font-bold uppercase">Before: Crash Damage</span>
+                <img src="/accident-1-before.jpeg" alt="Accident Crash Damage" class="w-full h-48 object-cover">
+              </div>
+              <div class="rounded-xl overflow-hidden border border-neutral-800 relative">
+                <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-emerald-600/90 text-white text-[10px] font-bold uppercase">After: Restored &amp; Baked</span>
+                <img src="/accident-1-after.jpeg" alt="Accident Restored" class="w-full h-48 object-cover">
+              </div>
+            </div>
+            <p class="text-xs text-neutral-400 mt-4">
+              Hydraulic chassis pulling, laser gap alignment, genuine fender and radiator replacement, followed by pressurized thermal oven base and clear coats.
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-neutral-900/60 rounded-2xl border border-neutral-800 p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold text-white uppercase font-display">Thermal Oven Paint Baking</span>
+              <span class="text-xs text-amber-400 font-mono-nums font-bold">Live Booth Video</span>
+            </div>
+            <div class="rounded-xl overflow-hidden border border-neutral-800 bg-black aspect-video relative">
+              <video src="/paint-booth-finish.mp4" controls autoplay muted loop class="w-full h-full object-cover"></video>
+            </div>
+            <p class="text-xs text-neutral-400 mt-4">
+              Dust-free pressurized spray booth operated at controlled 60°C bake cycle with high-solids German clear coat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE AED CALCULATOR -->
+  <section id="estimator" class="py-20 border-b border-neutral-800 bg-[#05080c]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Transparent AED Pricing</span>
+        <h2 class="font-display text-3xl font-extrabold text-white uppercase mt-1">Instant Repair Cost Estimator</h2>
+        <p class="text-neutral-400 text-xs mt-1">Select your vehicle type and maintenance requirements to calculate your estimate</p>
+      </div>
+
+      <div class="bg-neutral-900/90 rounded-2xl border border-neutral-800 p-6 sm:p-8 space-y-6">
+        <div>
+          <label class="text-xs font-bold uppercase text-neutral-400 block mb-2 font-display">1. Choose Vehicle Category</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="cat-group">
+            <button onclick="setCategory('sedan', 1.0, this)" class="cat-btn p-3 rounded-xl bg-amber-400 text-neutral-950 font-bold text-xs border border-amber-400">Sedan / Hatchback</button>
+            <button onclick="setCategory('suv', 1.25, this)" class="cat-btn p-3 rounded-xl bg-neutral-950 text-neutral-300 font-bold text-xs border border-neutral-800 hover:border-neutral-700">Mid-Size SUV</button>
+            <button onclick="setCategory('luxury', 1.5, this)" class="cat-btn p-3 rounded-xl bg-neutral-950 text-neutral-300 font-bold text-xs border border-neutral-800 hover:border-neutral-700">Luxury / German</button>
+            <button onclick="setCategory('4x4', 1.35, this)" class="cat-btn p-3 rounded-xl bg-neutral-950 text-neutral-300 font-bold text-xs border border-neutral-800 hover:border-neutral-700">Full 4x4 / Off-Road</button>
+          </div>
+        </div>
+
+        <div>
+          <label class="text-xs font-bold uppercase text-neutral-400 block mb-2 font-display">2. Select Required Services</label>
+          <div class="space-y-2">
+            <label class="flex items-center justify-between p-3 rounded-xl bg-neutral-950 border border-neutral-800 cursor-pointer hover:border-amber-400/40">
+              <span class="flex items-center gap-3">
+                <input type="checkbox" checked value="180" onchange="calculateTotal()" class="srv-chk w-4 h-4 accent-amber-400">
+                <span class="text-xs font-semibold text-white">Full Computerized Engine &amp; Module Diagnostics</span>
+              </span>
+              <span class="text-xs font-mono-nums font-bold text-amber-400">180 AED</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3 rounded-xl bg-neutral-950 border border-neutral-800 cursor-pointer hover:border-amber-400/40">
+              <span class="flex items-center gap-3">
+                <input type="checkbox" checked value="250" onchange="calculateTotal()" class="srv-chk w-4 h-4 accent-amber-400">
+                <span class="text-xs font-semibold text-white">Gulf AC 50°C Precision Overhaul &amp; R134a Recharge</span>
+              </span>
+              <span class="text-xs font-mono-nums font-bold text-amber-400">250 AED</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3 rounded-xl bg-neutral-950 border border-neutral-800 cursor-pointer hover:border-amber-400/40">
+              <span class="flex items-center gap-3">
+                <input type="checkbox" value="160" onchange="calculateTotal()" class="srv-chk w-4 h-4 accent-amber-400">
+                <span class="text-xs font-semibold text-white">Front &amp; Rear Brake Pad Replacement + Disc Lathing</span>
+              </span>
+              <span class="text-xs font-mono-nums font-bold text-amber-400">160 AED</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3 rounded-xl bg-neutral-950 border border-neutral-800 cursor-pointer hover:border-amber-400/40">
+              <span class="flex items-center gap-3">
+                <input type="checkbox" value="220" onchange="calculateTotal()" class="srv-chk w-4 h-4 accent-amber-400">
+                <span class="text-xs font-semibold text-white">Periodic Service (Fully Synthetic Oil + OEM Filter)</span>
+              </span>
+              <span class="text-xs font-mono-nums font-bold text-amber-400">220 AED</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Total Display -->
+        <div class="p-4 rounded-xl bg-neutral-950 border border-amber-400/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <div class="text-[10px] text-neutral-400 uppercase font-bold">Estimated Cost (Incl. Inspection)</div>
+            <div class="text-3xl font-black text-amber-400 font-mono-nums font-display" id="total-val">430 AED</div>
+            <div class="text-[11px] text-emerald-400">✓ Includes 6-month written warranty on labor</div>
+          </div>
+          <a id="book-link" href="https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto,%20I%20would%20like%20to%20book%20a%20service.%20My%20estimate%20is%20430%20AED." target="_blank" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider text-center">
+            Confirm on WhatsApp →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE JOB CARD TRACKER -->
+  <section id="tracker" class="py-20 border-b border-neutral-800 bg-[#070a0f]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Client Portal</span>
+        <h2 class="font-display text-3xl font-extrabold text-white uppercase mt-1">Live Job Card Tracker</h2>
+        <p class="text-neutral-400 text-xs mt-1">Track your vehicle's live workshop status across our 6-stage repair flow</p>
+      </div>
+
+      <div class="bg-neutral-900 rounded-2xl border border-neutral-800 p-6 space-y-4">
+        <div class="flex gap-2">
+          <input type="text" id="order-input" value="ALSAMA-9812" placeholder="e.g. ALSAMA-9812" class="flex-1 px-4 py-2.5 rounded-xl bg-neutral-950 border border-neutral-700 text-white text-xs font-mono font-bold uppercase focus:border-amber-400 focus:outline-none">
+          <button onclick="lookupOrder()" class="px-5 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-neutral-950 font-bold text-xs uppercase">
+            Lookup
+          </button>
+        </div>
+
+        <div id="order-result" class="p-4 rounded-xl bg-neutral-950 border border-neutral-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-xs font-bold text-white uppercase font-display" id="res-car">Toyota Land Cruiser V8 (Plate: SHJ 84920)</span>
+              <div class="text-[11px] text-neutral-400" id="res-service">Full 50°C AC Compressor Replacement &amp; Flush</div>
+            </div>
+            <span class="px-2.5 py-1 rounded bg-amber-400/20 border border-amber-400 text-amber-400 text-xs font-bold font-mono" id="res-stage">
+              Stage 4: Active Repair
+            </span>
+          </div>
+
+          <div class="w-full bg-neutral-800 h-2 rounded-full overflow-hidden">
+            <div id="res-bar" class="bg-amber-400 h-full w-[70%]"></div>
+          </div>
+
+          <div class="flex items-center justify-between text-[11px] text-neutral-400 pt-1">
+            <span>Bay: <strong class="text-white" id="res-bay">Lift #2 (Mechanical)</strong></span>
+            <span>Est. Ready: <strong class="text-emerald-400" id="res-time">Today, 5:30 PM</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & ENTRANCE -->
+  <section id="contact" class="py-20 bg-[#05080c]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-5 space-y-4">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Workshop Entrance</span>
+        <h2 class="font-display text-3xl font-extrabold text-white uppercase">Al Sama Auto Sharjah</h2>
+        <div class="font-arabic text-amber-300 text-sm font-bold">ورشة طيور السماء لصيانة السيارات - الشارقة</div>
+        <p class="text-xs text-neutral-300 leading-relaxed">
+          Conveniently located in Sharjah Industrial Area with open wide bays for effortless drop-off and pickup. Direct towing recovery coordination available across Sharjah and Dubai.
+        </p>
+
+        <div class="rounded-xl overflow-hidden border border-neutral-800">
+          <img src="/workshop-signboard.jpeg" alt="Workshop Signboard" class="w-full h-44 object-cover" onerror="this.src='https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=800&q=80'">
+        </div>
+
+        <div class="pt-2">
+          <a href="https://maps.google.com/?q=25.2974757,55.4054199" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-neutral-950 font-bold text-xs uppercase tracking-wider">
+            <span>Open in Google Maps</span> →
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-neutral-800 h-[380px]">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.3475765798935!2d55.4032312!3d25.2974757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f4f8a8bb6bb%3A0xd64a93864073e5dc!2s25%C2%B017&#39;50.9%22N%2055%C2%B024&#39;19.5%22E!5e0!3m2!1sen!2sae!4v1711283920000!5m2!1sen!2sae"
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#03060a] border-t border-neutral-800 py-10 text-center text-xs text-neutral-500">
+    <div class="max-w-7xl mx-auto px-4 space-y-2">
+      <div class="font-display font-black text-sm text-white">AL SAMA AUTO • ورشة طيور السماء</div>
+      <div>Sharjah Industrial Area • UAE | Phone: +971 56 458 0084</div>
+      <div class="text-neutral-600 text-[11px] pt-4">© 2026 Al Sama Auto. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    let currentMultiplier = 1.0;
+
+    function setCategory(cat, mult, btn) {
+      currentMultiplier = mult;
+      document.querySelectorAll('.cat-btn').forEach(b => {
+        b.className = 'cat-btn p-3 rounded-xl bg-neutral-950 text-neutral-300 font-bold text-xs border border-neutral-800 hover:border-neutral-700';
+      });
+      btn.className = 'cat-btn p-3 rounded-xl bg-amber-400 text-neutral-950 font-bold text-xs border border-amber-400';
+      calculateTotal();
+    }
+
+    function calculateTotal() {
+      let base = 0;
+      document.querySelectorAll('.srv-chk:checked').forEach(c => {
+        base += parseInt(c.value);
+      });
+      const total = Math.round(base * currentMultiplier);
+      document.getElementById('total-val').innerText = total + ' AED';
+      document.getElementById('book-link').href = 'https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto,%20I%20would%20like%20to%20book%20a%20service.%20My%20estimate%20is%20' + total + '%20AED.';
+    }
+
+    const mockOrders = {
+      'ALSAMA-9812': {
+        car: 'Toyota Land Cruiser V8 (Plate: SHJ 84920)',
+        service: 'Full 50°C AC Compressor Replacement & Flush',
+        stage: 'Stage 4: Active Repair',
+        progress: '70%',
+        bay: 'Lift #2 (Mechanical)',
+        time: 'Today, 5:30 PM'
+      },
+      'ALSAMA-9815': {
+        car: 'Nissan Patrol Nismo (Plate: DXB 44102)',
+        service: 'Front Fender Alignment & Thermal Oven Paint Baking',
+        stage: 'Stage 5: Oven Baking (60°C)',
+        progress: '85%',
+        bay: 'Oven Spray Booth #1',
+        time: 'Today, 7:00 PM'
+      },
+      'ALSAMA-9801': {
+        car: 'Mercedes-Benz E300 (Plate: AJM 19482)',
+        service: 'Transmission Valve Body & Computer Module Coding',
+        stage: 'Stage 6: Ready for Pickup',
+        progress: '100%',
+        bay: 'Bay #1 Inspection Zone',
+        time: 'Ready for Collection'
+      }
+    };
+
+    function lookupOrder() {
+      const id = document.getElementById('order-input').value.trim().toUpperCase();
+      const order = mockOrders[id] || {
+        car: 'Order #' + id + ' (Vehicle in Intake)',
+        service: 'Diagnostic Evaluation in Progress',
+        stage: 'Stage 2: Technical Inspection',
+        progress: '30%',
+        bay: 'Intake Bay #3',
+        time: 'Pending Inspection'
+      };
+
+      document.getElementById('res-car').innerText = order.car;
+      document.getElementById('res-service').innerText = order.service;
+      document.getElementById('res-stage').innerText = order.stage;
+      document.getElementById('res-bar').style.width = order.progress;
+      document.getElementById('res-bay').innerText = order.bay;
+      document.getElementById('res-time').innerText = order.time;
+    }
+  </script>
 </body>
 </html>
