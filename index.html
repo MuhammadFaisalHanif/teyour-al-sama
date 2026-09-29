@@ -3,16 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AL SAMA AUTO | ورشة طيور السماء</title>
   
+  <!-- Local SEO Meta Tags -->
+  <title>Best Car Workshop in Sharjah | AL SAMA AUTO | Reliable Auto Repair Near Me</title>
+  <meta name="description" content="Looking for a trusted car repair workshop in Sharjah? AL SAMA AUTO services German, Japanese, and Korean cars with genuine OEM parts, transparent pricing, and computer diagnostics. Call now!">
+  <meta name="keywords" content="Car Workshop Sharjah, Car Repair Near Me, Auto Mechanic Sharjah, Car AC Repair Sharjah, Brake Replacement Sharjah, Computer Diagnostics UAE">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alsama-auto.vercel.app/">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AL SAMA AUTO | Car Repair & Maintenance Workshop in Sharjah">
+  <meta property="og:description" content="Precision German, Japanese & American auto care in Industrial Area, Sharjah. Transparent estimates and certified mechanics.">
+  <meta property="og:url" content="https://alsama-auto.vercel.app/">
+  <meta property="og:image" content="./workshop-signboard.jpeg">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- Google Fonts: Inter, Chakra Petch (automotive font), and Cairo (Arabic) -->
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Chakra+Petch:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Local Business Schema (JSON-LD) for Google Search & Maps -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "@id": "https://alsama-auto.vercel.app/#autorepair",
+    "name": "AL SAMA AUTO",
+    "alternateName": "ورشة طيور السماء لصيانة السيارات",
+    "image": "https://alsama-auto.vercel.app/workshop-signboard.jpeg",
+    "url": "https://alsama-auto.vercel.app/",
+    "telephone": "+971564580084",
+    "priceRange": "AED 150 - AED 2500",
+    "currenciesAccepted": "AED",
+    "paymentAccepted": "Cash, Credit Card, Debit Card",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Industrial Area",
+      "addressLocality": "Sharjah",
+      "addressRegion": "Sharjah",
+      "postalCode": "00000",
+      "addressCountry": "AE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 25.3108911,
+      "longitude": 55.4036854
+    },
+    "hasMap": "https://maps.google.com/maps?q=25.3108911%2C55.4036854&z=17&hl=en",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Saturday",
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "opens": "09:00",
+        "closes": "21:00"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Auto Repair & Maintenance Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Computerized Engine & Transmission Diagnostics",
+            "description": "Dealer-level OBD-II multi-system fault analysis."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "UAE Climate AC Overhaul & Gas Top-Up",
+            "description": "Refrigerant recovery, leak testing, and compressor servicing."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Brake Replacement & Disc Skimming",
+            "description": "Ceramic brake pads replacement and rotor vibration resurfacing."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Accident Collision Repair & Thermal Paint Booth",
+            "description": "Chassis pulling, panel denting, and dust-free oven baked paint."
+          }
+        }
+      ]
+    }
+  }
+  </script>
 
   <script>
     tailwind.config = {
@@ -62,7 +160,7 @@
     }
   </style>
 </head>
-<body class="bg-tas-dark text-slate-200 font-sans antialiased selection:bg-tas-gold selection:text-black">
+<body class="bg-tas-dark text-slate-200 font-sans antialiased selection:bg-tas-gold selection:text-black pb-20 sm:pb-0">
 
   <!-- Top Announcement Bar -->
   <div class="bg-[#05080C] border-b border-tas-border/60 text-[11px] sm:text-xs py-2 px-4 text-slate-400">
@@ -80,7 +178,7 @@
       </div>
 
       <div class="flex items-center gap-4">
-        <span class="font-arabic font-bold text-tas-gold text-xs">السماء للسيارات</span>
+        <span class="font-arabic font-bold text-tas-gold text-xs">ورشة طيور السماء لصيانة السيارات</span>
         <span class="hidden sm:inline-block text-slate-600">|</span>
         <a href="tel:+971564580084" class="flex items-center gap-1 text-slate-200 hover:text-tas-gold transition-colors font-semibold">
           <i data-lucide="phone-call" class="w-3.5 h-3.5 text-tas-gold"></i>
@@ -108,7 +206,7 @@
             Auto Repair & Maintenance
           </div>
           <div class="font-arabic text-[10px] text-amber-300/80 -mt-0.5">
-            السماء للسيارات
+            ورشة طيور السماء
           </div>
         </div>
       </a>
@@ -116,20 +214,20 @@
       <!-- Desktop Links -->
       <nav class="hidden lg:flex items-center space-x-7 text-xs font-semibold uppercase tracking-wider text-slate-300">
         <a href="#services" class="hover:text-tas-gold transition-colors">Services</a>
+        <a href="#how-it-works" class="hover:text-tas-gold transition-colors">How It Works</a>
         <a href="#estimator" class="hover:text-tas-gold transition-colors">Cost Estimator (AED)</a>
         <a href="#restorations" class="hover:text-tas-gold transition-colors">Restorations</a>
-        <a href="#why-us" class="hover:text-tas-gold transition-colors">Why Choose Us</a>
-        <a href="#booking" class="hover:text-tas-gold transition-colors">Online Booking</a>
+        <a href="#faqs" class="hover:text-tas-gold transition-colors">FAQs</a>
         <a href="#contact" class="hover:text-tas-gold transition-colors">Location</a>
       </nav>
 
       <div class="hidden sm:flex items-center gap-3">
-        <a href="https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto,%20I%20would%20like%20to%20inquire%20about%20car%20service" target="_blank" class="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500 hover:text-slate-950 transition-all text-xs font-semibold flex items-center gap-1.5">
+        <a href="https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto,%20I%20would%20like%20to%20get%20a%20car%20repair%20quote" target="_blank" class="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500 hover:text-slate-950 transition-all text-xs font-semibold flex items-center gap-1.5">
           <i data-lucide="message-square" class="w-4 h-4"></i>
           <span class="hidden xl:inline">WhatsApp</span>
         </a>
         <a href="#booking" class="px-5 py-2.5 rounded-lg bg-tas-gold hover:bg-tas-goldHover text-slate-950 font-display font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-amber-500/20 active:scale-95 flex items-center gap-2">
-          <span>Book Service</span>
+          <span>Book Bay</span>
           <i data-lucide="wrench" class="w-3.5 h-3.5"></i>
         </a>
       </div>
@@ -142,13 +240,13 @@
     <!-- Mobile Dropdown Menu -->
     <div id="mobileNavMenu" class="hidden lg:hidden border-t border-tas-border bg-tas-slate px-6 py-5 space-y-4">
       <div class="font-arabic text-tas-gold text-sm font-bold border-b border-tas-border/60 pb-2">
-        السماء للسيارات - خدمة متميزة
+        ورشة طيور السماء - صيانة معتمدة في الشارقة
       </div>
       <a href="#services" onclick="toggleMobileNav()" class="block text-sm font-medium text-slate-300 hover:text-tas-gold">Automotive Services</a>
+      <a href="#how-it-works" onclick="toggleMobileNav()" class="block text-sm font-medium text-slate-300 hover:text-tas-gold">How It Works</a>
       <a href="#estimator" onclick="toggleMobileNav()" class="block text-sm font-medium text-slate-300 hover:text-tas-gold">Interactive Price Calculator (AED)</a>
       <a href="#restorations" onclick="toggleMobileNav()" class="block text-sm font-medium text-slate-300 hover:text-tas-gold">Before & After Restorations</a>
-      <a href="#why-us" onclick="toggleMobileNav()" class="block text-sm font-medium text-slate-300 hover:text-tas-gold">Workshop Advantages</a>
-      <a href="#booking" onclick="toggleMobileNav()" class="block text-sm font-medium text-slate-300 hover:text-tas-gold">Book Appointment</a>
+      <a href="#faqs" onclick="toggleMobileNav()" class="block text-sm font-medium text-slate-300 hover:text-tas-gold">Frequently Asked Questions</a>
       <a href="#contact" onclick="toggleMobileNav()" class="block text-sm font-medium text-slate-300 hover:text-tas-gold">Workshop Bay & Location</a>
       <div class="pt-2 flex flex-col gap-2">
         <a href="#booking" onclick="toggleMobileNav()" class="w-full text-center py-3 rounded-lg bg-tas-gold text-slate-950 font-bold uppercase text-xs">
@@ -161,8 +259,8 @@
     </div>
   </header>
 
-  <!-- Hero Section (Displays workshop-bay.jpeg) -->
-  <section class="relative pt-24 pb-20 md:pt-32 md:pb-32 overflow-hidden grid-pattern">
+  <!-- Hero Section (Optimized for Mobile Ads & Conversions) -->
+  <section class="relative pt-20 pb-16 md:pt-28 md:pb-28 overflow-hidden grid-pattern">
     <div class="absolute top-0 right-1/4 w-96 h-96 gold-radial pointer-events-none -z-10"></div>
     <div class="absolute bottom-10 left-10 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
 
@@ -172,72 +270,56 @@
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-tas-card border border-tas-border text-xs font-semibold text-tas-gold">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>Sharjah Certified Workshop &bull; Precision German, Japanese & American Auto Care</span>
+            <span>Sharjah Auto Hub &bull; German, Japanese & Korean Specialists</span>
           </div>
 
-          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-white leading-tight">
-            AL SAMA AUTO & <br>
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-tas-gold via-amber-200 to-amber-500">Maintenance in Sharjah</span>
+          <!-- Bold, Benefit-Driven H1 Headline -->
+          <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-white leading-tight">
+            No Guesswork. No Hidden Charges. <br>
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-tas-gold via-amber-200 to-amber-500">
+              Reliable Car Repair in Sharjah
+            </span>
           </h1>
 
-          <div class="font-arabic text-xl sm:text-2xl text-slate-300 font-bold tracking-normal leading-normal">
-            السماء للسيارات &ndash; دقة، أمانة، وأداء مثالي لكل رحلة
-          </div>
-
+          <!-- Trust & Location Subheadline -->
           <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-            Specialized in high-temperature UAE climate conditioning, computerized OBD-II engine and transmission diagnostics, chassis straightening, accident rebuilding, and certified major servicing.
+            From computerized OBD-II diagnostics to complete engine and AC overhauls, our certified mechanics keep your vehicle running smoothly. Conveniently located in Industrial Area, Sharjah with same-day express service on all routine maintenance.
           </p>
 
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 text-left">
-            <div class="p-3 rounded-xl bg-tas-card/80 border border-tas-border">
-              <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400 mb-1"></i>
-              <div class="text-xs font-bold text-white">Genuine OEM</div>
-              <div class="text-[10px] text-slate-400">Parts with Warranty</div>
-            </div>
-            <div class="p-3 rounded-xl bg-tas-card/80 border border-tas-border">
-              <i data-lucide="snowflake" class="w-5 h-5 text-tas-blue mb-1"></i>
-              <div class="text-xs font-bold text-white">Gulf AC Experts</div>
-              <div class="text-[10px] text-slate-400">Sub-zero Cooling</div>
-            </div>
-            <div class="p-3 rounded-xl bg-tas-card/80 border border-tas-border">
-              <i data-lucide="cpu" class="w-5 h-5 text-tas-gold mb-1"></i>
-              <div class="text-xs font-bold text-white">Live Diagnostics</div>
-              <div class="text-[10px] text-slate-400">Dealer-level scanners</div>
-            </div>
-            <div class="p-3 rounded-xl bg-tas-card/80 border border-tas-border">
-              <i data-lucide="zap" class="w-5 h-5 text-amber-400 mb-1"></i>
-              <div class="text-xs font-bold text-white">Fast Turnaround</div>
-              <div class="text-[10px] text-slate-400">Same-Day Express</div>
-            </div>
-          </div>
-
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-            <a href="#booking" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-tas-gold hover:bg-tas-goldHover text-slate-950 font-display font-bold uppercase tracking-wider text-sm transition-all shadow-xl shadow-amber-500/25 text-center flex items-center justify-center gap-2 group">
-              <span>Book Bay Inspection</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          <!-- Primary & Secondary Direct-Response CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="tel:+971564580084" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-tas-gold hover:bg-tas-goldHover text-slate-950 font-display font-bold uppercase tracking-wider text-sm transition-all shadow-xl shadow-amber-500/25 text-center flex items-center justify-center gap-2.5 active:scale-95">
+              <i data-lucide="phone-call" class="w-4 h-4"></i>
+              <span>Call Now: +971 56 458 0084</span>
             </a>
-            <a href="#estimator" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-tas-card hover:bg-slate-800 text-white font-semibold text-sm border border-tas-border transition-all text-center flex items-center justify-center gap-2">
-              <i data-lucide="calculator" class="w-4 h-4 text-tas-gold"></i>
-              <span>Estimate Repair Cost (AED)</span>
+            <a href="https://wa.me/971564580084?text=Hi%20Al%20Sama%20Auto,%20I%20need%20a%20quick%20quote%20for%20my%20car" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-all text-center flex items-center justify-center gap-2.5 shadow-lg shadow-emerald-500/20 active:scale-95">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Chat on WhatsApp for Instant Quote</span>
             </a>
           </div>
 
-          <div class="pt-6 border-t border-tas-border/80 flex flex-wrap justify-between gap-4 text-center sm:text-left">
-            <div>
-              <div class="font-display text-2xl font-black text-white">15,000+</div>
-              <div class="text-xs text-slate-400">Vehicles Serviced</div>
+          <!-- 3 Trust Micro-Copy Badges -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 text-left">
+            <div class="p-3 rounded-xl bg-tas-card/80 border border-tas-border flex items-center gap-3">
+              <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400 shrink-0"></i>
+              <div>
+                <div class="text-xs font-bold text-white">100% Genuine Parts</div>
+                <div class="text-[10px] text-slate-400">OEM Warranty Protected</div>
+              </div>
             </div>
-            <div>
-              <div class="font-display text-2xl font-black text-tas-gold">100%</div>
-              <div class="text-xs text-slate-400">Transparent Invoicing</div>
+            <div class="p-3 rounded-xl bg-tas-card/80 border border-tas-border flex items-center gap-3">
+              <i data-lucide="badge-dollar-sign" class="w-5 h-5 text-tas-gold shrink-0"></i>
+              <div>
+                <div class="text-xs font-bold text-white">Zero Hidden Costs</div>
+                <div class="text-[10px] text-slate-400">Written Upfront Estimate</div>
+              </div>
             </div>
-            <div>
-              <div class="font-display text-2xl font-black text-white">4.9 / 5.0</div>
-              <div class="text-xs text-slate-400">Customer Satisfaction</div>
-            </div>
-            <div>
-              <div class="font-display text-2xl font-black text-emerald-400">12 Mo</div>
-              <div class="text-xs text-slate-400">Labor Guarantee</div>
+            <div class="p-3 rounded-xl bg-tas-card/80 border border-tas-border flex items-center gap-3">
+              <i data-lucide="zap" class="w-5 h-5 text-sky-400 shrink-0"></i>
+              <div>
+                <div class="text-xs font-bold text-white">Same-Day Service</div>
+                <div class="text-[10px] text-slate-400">Fast Bay Turnaround</div>
+              </div>
             </div>
           </div>
         </div>
@@ -246,7 +328,7 @@
         <div class="lg:col-span-5 relative">
           <div class="relative rounded-2xl overflow-hidden border border-tas-border shadow-2xl bg-tas-card group">
             <img src="./workshop-bay.jpeg" 
-                 alt="Al Sama Auto Workshop Bay Facility" 
+                 alt="Al Sama Auto Workshop Bay Facility in Sharjah" 
                  class="w-full h-[460px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
                  onerror="this.src='./accident-1-after.jpeg'">
             
@@ -257,17 +339,17 @@
                 <div class="flex items-center gap-3">
                   <div class="w-3.5 h-3.5 rounded-full bg-emerald-400 animate-ping"></div>
                   <div>
-                    <h2 class="text-xs font-bold text-white uppercase tracking-wide">Workshop Bays: Active</h2>
-                    <p class="text-[11px] text-slate-400">Multiple Service Lifts & Diagnostics Bays</p>
+                    <h2 class="text-xs font-bold text-white uppercase tracking-wide">Sharjah Workshop Bay: Open</h2>
+                    <p class="text-[11px] text-slate-400">Express Oil, Brakes, AC & Collision Lifts Ready</p>
                   </div>
                 </div>
                 <span class="text-xs font-mono font-bold text-tas-gold bg-tas-gold/10 px-2.5 py-1 rounded border border-tas-gold/30">
-                  Sharjah Bay
+                  Industrial Area
                 </span>
               </div>
               <div class="mt-3 text-[11px] text-slate-300 flex items-center justify-between border-t border-tas-border/60 pt-2">
-                <span>Direct WhatsApp: <strong>Instant Response</strong></span>
-                <a href="#booking" class="text-tas-gold hover:underline font-bold">Reserve Lift &rarr;</a>
+                <span>Call or WhatsApp: <strong>Immediate Response</strong></span>
+                <a href="#booking" class="text-tas-gold hover:underline font-bold">Reserve Bay &rarr;</a>
               </div>
             </div>
           </div>
@@ -277,61 +359,40 @@
     </div>
   </section>
 
-  <!-- Services Grid -->
+  <!-- High-Converting Service Breakdown -->
   <section id="services" class="py-20 bg-tas-slate/50 border-y border-tas-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
         <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-tas-gold">Engineered for UAE Conditions</span>
-          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase mt-1">Our Workshop Specialties</h2>
-          <p class="text-slate-400 text-sm max-w-2xl mt-2 font-arabic text-base">خدمات شاملة لصيانة وتصليح جميع أنواع المركبات بأعلى معايير الجودة والضمان</p>
+          <span class="text-xs font-bold uppercase tracking-widest text-tas-gold">Dealer-Level Quality Without Dealer Rates</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase mt-1">Specialized Auto Services in Sharjah</h2>
+          <p class="text-slate-400 text-sm max-w-2xl mt-2 font-arabic text-base">خدمات صيانة وتصليح شاملة لجميع موديلات السيارات بأيدي فنيين محترفين</p>
         </div>
 
         <div class="flex flex-wrap gap-2" id="serviceTabs">
           <button onclick="filterServiceCategory('all')" class="svc-tab active px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-tas-gold text-slate-950">All Services</button>
-          <button onclick="filterServiceCategory('ac-engine')" class="svc-tab px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-tas-card border border-tas-border text-slate-300 hover:text-white">AC & Engine</button>
-          <button onclick="filterServiceCategory('brakes-suspension')" class="svc-tab px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-tas-card border border-tas-border text-slate-300 hover:text-white">Brakes & Suspension</button>
-          <button onclick="filterServiceCategory('maintenance')" class="svc-tab px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-tas-card border border-tas-border text-slate-300 hover:text-white">Periodic Service</button>
+          <button onclick="filterServiceCategory('ac-engine')" class="svc-tab px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-tas-card border border-tas-border text-slate-300 hover:text-white">Diagnostics & AC</button>
+          <button onclick="filterServiceCategory('brakes-suspension')" class="svc-tab px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-tas-card border border-tas-border text-slate-300 hover:text-white">Brakes & Mechanical</button>
+          <button onclick="filterServiceCategory('maintenance')" class="svc-tab px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-tas-card border border-tas-border text-slate-300 hover:text-white">Service Packages</button>
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="servicesGrid">
 
-        <!-- AC Overhaul -->
-        <div class="service-item ac-engine glass-card rounded-2xl p-6 glass-card-hover transition-all duration-300 flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center mb-5">
-              <i data-lucide="snowflake" class="w-6 h-6"></i>
-            </div>
-            <div class="flex items-center justify-between mb-1">
-              <h3 class="font-display text-lg font-bold text-white uppercase">UAE Climate AC Overhaul</h3>
-              <span class="text-xs font-mono font-bold text-tas-gold">From 180 AED</span>
-            </div>
-            <div class="font-arabic text-xs text-amber-300/70 mb-3 font-semibold">صيانة وتعبئة مكيفات السيارات والتبريد الفائق</div>
-            <p class="text-xs text-slate-300 leading-relaxed mb-4">
-              Heavy-duty recovery and recharge of R134a refrigerants, evaporator leak checks, compressor clutch testing, condenser chemical wash, and cabin disinfection designed to beat 50°C summer heat.
-            </p>
-          </div>
-          <button onclick="prefillBookingFromService('AC Overhaul & Climate Control', 180)" class="w-full py-2.5 rounded-lg bg-tas-card hover:bg-tas-gold hover:text-slate-950 text-xs font-bold uppercase tracking-wider text-slate-200 transition-colors flex items-center justify-center gap-2 border border-tas-border">
-            <span>Book AC Service</span>
-            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-          </button>
-        </div>
-
-        <!-- Diagnostics -->
+        <!-- Service 1: Computer Diagnostics -->
         <div class="service-item ac-engine glass-card rounded-2xl p-6 glass-card-hover transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-12 h-12 rounded-xl bg-tas-gold/10 border border-tas-gold/30 text-tas-gold flex items-center justify-center mb-5">
               <i data-lucide="activity" class="w-6 h-6"></i>
             </div>
             <div class="flex items-center justify-between mb-1">
-              <h3 class="font-display text-lg font-bold text-white uppercase">Computerized Diagnostics</h3>
+              <h3 class="font-display text-lg font-bold text-white uppercase">Computer Diagnostics & Scans</h3>
               <span class="text-xs font-mono font-bold text-tas-gold">From 150 AED</span>
             </div>
             <div class="font-arabic text-xs text-amber-300/70 mb-3 font-semibold">فحص وبرمجة كمبيوتر السيارات وكشف الأعطال</div>
             <p class="text-xs text-slate-300 leading-relaxed mb-4">
-              OEM scanners for Mercedes, BMW, Audi, Lexus, Patrol, Land Cruiser. Comprehensive engine check light analysis, live sensor readings, and module adaptation resets.
+              Dealing with an active check-engine warning or sudden misfires? We run dealer-level multi-system diagnostic scans to isolate exact electrical and mechanical faults without trial-and-error parts swapping.
             </p>
           </div>
           <button onclick="prefillBookingFromService('Computer Diagnostics & Scans', 150)" class="w-full py-2.5 rounded-lg bg-tas-card hover:bg-tas-gold hover:text-slate-950 text-xs font-bold uppercase tracking-wider text-slate-200 transition-colors flex items-center justify-center gap-2 border border-tas-border">
@@ -340,19 +401,40 @@
           </button>
         </div>
 
-        <!-- Brakes -->
+        <!-- Service 2: Climate-Proof Car AC Repair -->
+        <div class="service-item ac-engine glass-card rounded-2xl p-6 glass-card-hover transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center mb-5">
+              <i data-lucide="snowflake" class="w-6 h-6"></i>
+            </div>
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-display text-lg font-bold text-white uppercase">Climate AC Overhaul & Freon Refill</h3>
+              <span class="text-xs font-mono font-bold text-tas-gold">From 180 AED</span>
+            </div>
+            <div class="font-arabic text-xs text-amber-300/70 mb-3 font-semibold">صيانة وتعبئة مكيفات السيارات والتبريد الفائق</div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Weak cooling or unpleasant odors during hot highway commutes? We perform high-pressure leak testing, compressor clutch repair, condenser chemical cleaning, and R134a refrigerant refills to deliver ice-cold airflow.
+            </p>
+          </div>
+          <button onclick="prefillBookingFromService('AC Overhaul & Climate Control', 180)" class="w-full py-2.5 rounded-lg bg-tas-card hover:bg-tas-gold hover:text-slate-950 text-xs font-bold uppercase tracking-wider text-slate-200 transition-colors flex items-center justify-center gap-2 border border-tas-border">
+            <span>Book AC Service</span>
+            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Service 3: Brake Safety & Disc Skimming -->
         <div class="service-item brakes-suspension glass-card rounded-2xl p-6 glass-card-hover transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 flex items-center justify-center mb-5">
               <i data-lucide="disc" class="w-6 h-6"></i>
             </div>
             <div class="flex items-center justify-between mb-1">
-              <h3 class="font-display text-lg font-bold text-white uppercase">Brake Discs & Resurfacing</h3>
+              <h3 class="font-display text-lg font-bold text-white uppercase">Brake Discs & Lathe Skimming</h3>
               <span class="text-xs font-mono font-bold text-tas-gold">From 200 AED</span>
             </div>
             <div class="font-arabic text-xs text-amber-300/70 mb-3 font-semibold">تبديل وتخريطه سفايف وفرامل وضبط الأمان</div>
             <p class="text-xs text-slate-300 leading-relaxed mb-4">
-              Ceramic high-heat brake pads replacement, on-car rotor skim resurfacing to eliminate vibration at highway speeds, and DOT 4 pressure bleeding.
+              Experiencing high-speed steering wobble, squealing noises, or spongy pedals? We fit genuine ceramic brake pads, perform on-car rotor disc lathe resurfacing, and conduct full pressure bleeding.
             </p>
           </div>
           <button onclick="prefillBookingFromService('Brake System & Disc Service', 200)" class="w-full py-2.5 rounded-lg bg-tas-card hover:bg-tas-gold hover:text-slate-950 text-xs font-bold uppercase tracking-wider text-slate-200 transition-colors flex items-center justify-center gap-2 border border-tas-border">
@@ -361,19 +443,40 @@
           </button>
         </div>
 
-        <!-- Suspension -->
+        <!-- Service 4: Periodic Major & Minor Maintenance -->
+        <div class="service-item maintenance glass-card rounded-2xl p-6 glass-card-hover transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-5">
+              <i data-lucide="wrench" class="w-6 h-6"></i>
+            </div>
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-display text-lg font-bold text-white uppercase">Periodic Service Packages</h3>
+              <span class="text-xs font-mono font-bold text-tas-gold">From 220 AED</span>
+            </div>
+            <div class="font-arabic text-xs text-amber-300/70 mb-3 font-semibold">صيانة دورية دورية كبرى وصغرى بزيوت أصلية معتمدة</div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Prevent major failures and protect vehicle longevity. Packages feature fully synthetic Liqui Moly/Castrol motor oil, OEM filter replacements, iridium plugs, and an extensive 50-point complimentary inspection.
+            </p>
+          </div>
+          <button onclick="prefillBookingFromService('Periodic Minor/Major Service', 220)" class="w-full py-2.5 rounded-lg bg-tas-card hover:bg-tas-gold hover:text-slate-950 text-xs font-bold uppercase tracking-wider text-slate-200 transition-colors flex items-center justify-center gap-2 border border-tas-border">
+            <span>Book Service Package</span>
+            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Service 5: Suspension & 4x4 Off-Road -->
         <div class="service-item brakes-suspension glass-card rounded-2xl p-6 glass-card-hover transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 text-purple-400 flex items-center justify-center mb-5">
               <i data-lucide="layers" class="w-6 h-6"></i>
             </div>
             <div class="flex items-center justify-between mb-1">
-              <h3 class="font-display text-lg font-bold text-white uppercase">Suspension & 4x4 Off-Road</h3>
+              <h3 class="font-display text-lg font-bold text-white uppercase">Suspension & 4x4 Chassis Tuning</h3>
               <span class="text-xs font-mono font-bold text-tas-gold">From 250 AED</span>
             </div>
             <div class="font-arabic text-xs text-amber-300/70 mb-3 font-semibold">صيانة الشاصي والمساعدات والمساعدات الهيدروليكية</div>
             <p class="text-xs text-slate-300 leading-relaxed mb-4">
-              Shock absorbers, air suspension struts, tie rods, control arm bushings, steering racks, and 3D computer wheel alignment configured for UAE cruising and dunes.
+              Absorbers, air suspension struts, tie rods, control arms, and 3D computerized steering alignment engineered to handle daily city highways and demanding weekend desert terrain.
             </p>
           </div>
           <button onclick="prefillBookingFromService('Suspension & Alignment', 250)" class="w-full py-2.5 rounded-lg bg-tas-card hover:bg-tas-gold hover:text-slate-950 text-xs font-bold uppercase tracking-wider text-slate-200 transition-colors flex items-center justify-center gap-2 border border-tas-border">
@@ -382,44 +485,23 @@
           </button>
         </div>
 
-        <!-- Periodic Maintenance -->
-        <div class="service-item maintenance glass-card rounded-2xl p-6 glass-card-hover transition-all duration-300 flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-5">
-              <i data-lucide="wrench" class="w-6 h-6"></i>
-            </div>
-            <div class="flex items-center justify-between mb-1">
-              <h3 class="font-display text-lg font-bold text-white uppercase">Minor & Major Periodic Service</h3>
-              <span class="text-xs font-mono font-bold text-tas-gold">From 220 AED</span>
-            </div>
-            <div class="font-arabic text-xs text-amber-300/70 mb-3 font-semibold">صيانة دورية دورية كبرى وصغرى بزيوت أصلية معتمدة</div>
-            <p class="text-xs text-slate-300 leading-relaxed mb-4">
-              Fully synthetic engine oil (Liqui Moly / Castrol), OEM oil and air filters, iridium spark plugs, coolant top-up, and comprehensive 50-point inspection.
-            </p>
-          </div>
-          <button onclick="prefillBookingFromService('Periodic Minor/Major Service', 220)" class="w-full py-2.5 rounded-lg bg-tas-card hover:bg-tas-gold hover:text-slate-950 text-xs font-bold uppercase tracking-wider text-slate-200 transition-colors flex items-center justify-center gap-2 border border-tas-border">
-            <span>Book Periodic Service</span>
-            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-          </button>
-        </div>
-
-        <!-- Transmission -->
+        <!-- Service 6: Transmission & Gearbox Overhaul -->
         <div class="service-item ac-engine glass-card rounded-2xl p-6 glass-card-hover transition-all duration-300 flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-tas-gold/10 border border-tas-gold/30 text-tas-gold flex items-center justify-center mb-5">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center mb-5">
               <i data-lucide="settings" class="w-6 h-6"></i>
             </div>
             <div class="flex items-center justify-between mb-1">
-              <h3 class="font-display text-lg font-bold text-white uppercase">Transmission & Gearbox Care</h3>
+              <h3 class="font-display text-lg font-bold text-white uppercase">Transmission & Engine Overhaul</h3>
               <span class="text-xs font-mono font-bold text-tas-gold">From 350 AED</span>
             </div>
             <div class="font-arabic text-xs text-amber-300/70 mb-3 font-semibold">صيانة الجير الأوتوماتيكي وتغيير زيت الفتيس والفلتر</div>
             <p class="text-xs text-slate-300 leading-relaxed mb-4">
-              Transmission fluid flush, mechatronic troubleshooting, torque converter checks, valve body inspection, and replacement of internal filters and pans.
+              Dealing with gear slippage, hard shifts, or oil leaks? We execute transmission flushes, mechatronic troubleshooting, valve body overhauls, and complete engine rebuilds to exact factory torque specs.
             </p>
           </div>
           <button onclick="prefillBookingFromService('Transmission & Gearbox Repair', 350)" class="w-full py-2.5 rounded-lg bg-tas-card hover:bg-tas-gold hover:text-slate-950 text-xs font-bold uppercase tracking-wider text-slate-200 transition-colors flex items-center justify-center gap-2 border border-tas-border">
-            <span>Book Gearbox Inspection</span>
+            <span>Book Gearbox Bay</span>
             <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
           </button>
         </div>
@@ -428,8 +510,56 @@
     </div>
   </section>
 
+  <!-- How It Works Section (3-Step Painless Process) -->
+  <section id="how-it-works" class="py-20 bg-tas-dark relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-tas-gold">Simple 3-Step Process</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase mt-1">How It Works</h2>
+        <div class="font-arabic text-base text-amber-300/80 mt-1">خطوات سهلة وسريعة لصيانة سيارتك بدون أي تعقيد</div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <!-- Step 1 -->
+        <div class="glass-card p-8 rounded-2xl border border-tas-border relative group">
+          <div class="w-14 h-14 rounded-2xl bg-tas-gold/10 border border-tas-gold/30 text-tas-gold flex items-center justify-center text-xl font-black font-display mb-6 group-hover:bg-tas-gold group-hover:text-slate-950 transition-colors">
+            01
+          </div>
+          <h3 class="font-display text-lg font-bold text-white uppercase mb-2">Book Slot or Drive In</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Reserve in under 60 seconds via WhatsApp or call our Sharjah dispatch desk. Drive directly into our workshop bay in Industrial Area, Sharjah.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card p-8 rounded-2xl border border-tas-border relative group">
+          <div class="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center text-xl font-black font-display mb-6 group-hover:bg-sky-500 group-hover:text-slate-950 transition-colors">
+            02
+          </div>
+          <h3 class="font-display text-lg font-bold text-white uppercase mb-2">Transparent Digital Quote</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            We run comprehensive computerized diagnostics and send an itemized, binding quote with photo/video proof via WhatsApp before starting any repair.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card p-8 rounded-2xl border border-tas-border relative group">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl font-black font-display mb-6 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-colors">
+            03
+          </div>
+          <h3 class="font-display text-lg font-bold text-white uppercase mb-2">Fast Repair & Delivery</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Certified mechanics complete repairs using genuine OEM parts, perform multi-point road tests, and deliver your vehicle back backed by a garage warranty.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Interactive Estimator Section -->
-  <section id="estimator" class="py-20 relative">
+  <section id="estimator" class="py-20 bg-tas-slate/40 border-t border-tas-border relative">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-12">
@@ -451,19 +581,19 @@
                 <button type="button" onclick="selectCarCategory('economy', 1.0, 'Economy / Compact Sedan')" class="cat-btn active border-2 border-tas-gold bg-tas-gold/10 text-white rounded-xl p-3 text-center transition-all">
                   <i data-lucide="car" class="w-5 h-5 mx-auto mb-1 text-tas-gold"></i>
                   <span class="block text-xs font-bold">Sedan</span>
-                  <span class="text-[10px] text-slate-400">Corolla, Civic, Sunny</span>
+                  <span class="text-[10px] text-slate-400">Corolla, Sunny, Civic</span>
                 </button>
 
                 <button type="button" onclick="selectCarCategory('suv', 1.3, 'Midsize SUV / Crossover')" class="cat-btn border border-tas-border bg-tas-card text-slate-300 rounded-xl p-3 text-center transition-all hover:border-slate-500">
                   <i data-lucide="truck" class="w-5 h-5 mx-auto mb-1 text-slate-400"></i>
                   <span class="block text-xs font-bold">Midsize SUV</span>
-                  <span class="text-[10px] text-slate-400">RAV4, Prado, Tucson</span>
+                  <span class="text-[10px] text-slate-400">Prado, RAV4, Tucson</span>
                 </button>
 
                 <button type="button" onclick="selectCarCategory('luxury', 1.7, 'Luxury / European Performance')" class="cat-btn border border-tas-border bg-tas-card text-slate-300 rounded-xl p-3 text-center transition-all hover:border-slate-500">
                   <i data-lucide="sparkles" class="w-5 h-5 mx-auto mb-1 text-amber-300"></i>
                   <span class="block text-xs font-bold">Luxury / Euro</span>
-                  <span class="text-[10px] text-slate-400">BMW, Merc, Porsche</span>
+                  <span class="text-[10px] text-slate-400">BMW, Mercedes, Audi</span>
                 </button>
 
                 <button type="button" onclick="selectCarCategory('offroad', 1.5, '4x4 Off-road / Patrol & Land Cruiser')" class="cat-btn border border-tas-border bg-tas-card text-slate-300 rounded-xl p-3 text-center transition-all hover:border-slate-500">
@@ -678,58 +808,54 @@
     </div>
   </section>
 
-  <!-- Why Choose Us -->
-  <section id="why-us" class="py-20 bg-tas-slate/40 border-t border-tas-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- FAQs Section (Objection-Handling) -->
+  <section id="faqs" class="py-20 bg-tas-slate/40 border-t border-tas-border">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="text-xs font-bold uppercase tracking-widest text-tas-gold">The Al Sama Advantage</span>
-        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase mt-1">Why Drivers Trust Our Workshop</h2>
-        <div class="font-arabic text-base text-amber-300/80 mt-1">لماذا يختار السائقون ورشة طيور السماء لصيانة سياراتهم في الشارقة؟</div>
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-tas-gold">Got Questions?</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase mt-1">Frequently Asked Questions</h2>
+        <div class="font-arabic text-base text-amber-300/80 mt-1">إجابات واضحة على كل استفسارات صيانة وضمان السيارات</div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="glass-card p-6 rounded-2xl border border-tas-border glass-card-hover transition-all">
-          <div class="w-12 h-12 rounded-xl bg-tas-gold/10 text-tas-gold flex items-center justify-center mb-4">
-            <i data-lucide="award" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-display text-base font-bold text-white uppercase mb-1">Master Technicians</h3>
-          <div class="font-arabic text-xs text-amber-300/70 mb-2">مهندسون وفنيون ذوو خبرة</div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Decades of combined hands-on experience dealing with Middle East climate conditions and high desert ambient heat.
+      <div class="space-y-4">
+        <div class="glass-card p-6 rounded-xl border border-tas-border">
+          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-tas-gold shrink-0"></i>
+            <span>How do you calculate repair estimates? Will the final bill change?</span>
+          </h4>
+          <p class="text-xs text-slate-300 leading-relaxed pl-6">
+            No unexpected charges ever. We provide a transparent, itemized digital quotation detailing both labor and spare parts costs prior to starting any repair. If our technicians identify an unforeseen secondary issue during disassembly, we halt work and obtain your explicit WhatsApp approval first.
           </p>
         </div>
 
-        <div class="glass-card p-6 rounded-2xl border border-tas-border glass-card-hover transition-all">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
-            <i data-lucide="badge-dollar-sign" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-display text-base font-bold text-white uppercase mb-1">Honest Transparent Pricing</h3>
-          <div class="font-arabic text-xs text-amber-300/70 mb-2">أسعار واضحة بدون مصاريف مخفية</div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            No work is started without an upfront itemized written quote. Photos and videos are shared with you via WhatsApp.
+        <div class="glass-card p-6 rounded-xl border border-tas-border">
+          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-tas-gold shrink-0"></i>
+            <span>Do you provide a warranty on parts and labor?</span>
+          </h4>
+          <p class="text-xs text-slate-300 leading-relaxed pl-6">
+            Yes. All mechanical and electrical repairs include an official workshop labor guarantee, alongside standard manufacturer warranties (up to 12 months) on all installed genuine OEM replacement parts.
           </p>
         </div>
 
-        <div class="glass-card p-6 rounded-2xl border border-tas-border glass-card-hover transition-all">
-          <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-4">
-            <i data-lucide="cpu" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-display text-base font-bold text-white uppercase mb-1">Dealer-Grade Technology</h3>
-          <div class="font-arabic text-xs text-amber-300/70 mb-2">أجهزة فحص إلكترونية حديثة</div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Factory-level scan tools capable of reprogramming electronic control modules, sensor calibrations, and gearbox adaptations.
+        <div class="glass-card p-6 rounded-xl border border-tas-border">
+          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-tas-gold shrink-0"></i>
+            <span>How fast can I get my car back?</span>
+          </h4>
+          <p class="text-xs text-slate-300 leading-relaxed pl-6">
+            Standard periodic oil changes, brake pad installations, and basic AC top-ups are completed within 2 to 3 hours. For complex diagnostic troubleshooting or major accident rebuilds, we deliver an upfront timeline with daily WhatsApp photo progress reports.
           </p>
         </div>
 
-        <div class="glass-card p-6 rounded-2xl border border-tas-border glass-card-hover transition-all">
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-4">
-            <i data-lucide="shield" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-display text-base font-bold text-white uppercase mb-1">Comprehensive Warranty</h3>
-          <div class="font-arabic text-xs text-amber-300/70 mb-2">ضمان حقيقي على قطع الغيار والأيدي العاملة</div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            We stand behind every repair. All fitted components and mechanical work are backed by a certified garage warranty.
+        <div class="glass-card p-6 rounded-xl border border-tas-border">
+          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-tas-gold shrink-0"></i>
+            <span>Do you use original factory parts or aftermarket alternatives?</span>
+          </h4>
+          <p class="text-xs text-slate-300 leading-relaxed pl-6">
+            We prioritize 100% genuine OEM (Original Equipment Manufacturer) components sourced through verified UAE distributors. Upon request, we can also supply certified Tier-1 aftermarket brands (such as Bosch, Brembo, or Denso) with distinct price comparisons.
           </p>
         </div>
       </div>
@@ -869,7 +995,7 @@
             </div>
             <div class="flex justify-between">
               <span class="text-slate-400">Date & Slot:</span>
-              <span id="resDateTime" class="font-bold text-white">18/09/2026 - 11:30 AM</span>
+              <span id="resDateTime" class="font-bold text-white">Today at Selected Slot</span>
             </div>
             <div class="flex justify-between">
               <span class="text-slate-400">Service:</span>
@@ -897,7 +1023,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="mb-10 text-center lg:text-left">
-        <span class="text-xs font-bold uppercase tracking-widest text-tas-gold">Visit Us</span>
+        <span class="text-xs font-bold uppercase tracking-widest text-tas-gold">Visit Us in Sharjah</span>
         <h2 class="font-display text-3xl font-bold text-white uppercase mt-1">Workshop Bay & Location</h2>
         <div class="font-arabic text-base text-amber-300/80 mt-1">موقع ورشة طيور السماء لصيانة السيارات وأوقات العمل في الشارقة</div>
       </div>
@@ -978,7 +1104,7 @@
           </div>
         </div>
 
-        <!-- Right: Real Google Map -->
+        <!-- Right: Real Google Map Embed -->
         <div class="relative rounded-2xl overflow-hidden border border-tas-border bg-tas-card shadow-2xl flex flex-col justify-between">
           <iframe 
             src="https://maps.google.com/maps?q=25.3108911,55.4036854&z=16&output=embed" 
@@ -1029,8 +1155,20 @@
     </div>
   </footer>
 
-  <!-- Floating Quick Actions -->
-  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+  <!-- Sticky Mobile Bottom Bar (High-Converting for Mobile Ads) -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#070A0F]/95 backdrop-blur-md border-t border-tas-border p-2.5 flex items-center gap-2">
+    <a href="tel:+971564580084" class="flex-1 py-3 rounded-lg bg-tas-gold text-slate-950 font-bold text-xs uppercase flex items-center justify-center gap-2 shadow-lg">
+      <i data-lucide="phone" class="w-4 h-4"></i>
+      <span>Call Us</span>
+    </a>
+    <a href="https://wa.me/971564580084?text=Hi%20Al%20Sama%20Auto,%20I%20need%20a%20car%20repair%20quote" target="_blank" class="flex-1 py-3 rounded-lg bg-emerald-600 text-white font-bold text-xs uppercase flex items-center justify-center gap-2 shadow-lg">
+      <i data-lucide="message-circle" class="w-4 h-4"></i>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Floating Quick Actions (Desktop & Tablet) -->
+  <div class="hidden sm:flex fixed bottom-6 right-6 z-40 flex-col gap-3">
     <a href="https://wa.me/971564580084?text=Hello%20Al%20Sama%20Auto,%20I%20would%20like%20to%20inquire%20about%20car%20service" 
        target="_blank" 
        class="w-13 h-13 p-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-xl shadow-emerald-500/30 flex items-center justify-center transition-all hover:scale-110 active:scale-95"
